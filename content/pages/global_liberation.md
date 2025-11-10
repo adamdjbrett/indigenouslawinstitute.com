@@ -1,0 +1,386 @@
+---
+title: Toward the Global Liberation of All Nations and Peoples
+---
+
+# Toward the Global Liberation of All Nations and Peoples 
+
+#### by Steve Newcomb (Shawnee/Lenape) [Indigenous Law Institute](index.html)
+
+Article 1 of the International Covenant on Civil and Political Rights
+(ICCPR) reads: \"All peoples have the right of self-determination. By
+virtue of that right they freely determine their political status and
+freely pursue their economic, social and cultural development.\" This
+exact language is also found in article 1 of the International Covenant
+on Economic, Social and Cultural Rights (ICESCR).
+
+The two abovementioned UN human rights Covenants were intended to serve
+as a \"more elaborate forumulation of human rights standards\" than the
+\"preliminary step\" of the Universal Declaration of Human Rights that
+was adopted by the UN General Assembly on December 10, 1948. In other
+words, the above language regarding all peoples having the right of
+self-determination found in the Covenants of December 16, 1966, was part
+of the General Assembly\'s effort to clarify the overall framework of
+human rights that it began to express in the Universal Declaration of
+Human Rights. (See, Ian Brownlie, Basic Documents in International Law,
+1983, p. 257)
+
+In the preamble of the Universal Declaration of Human Rights, we find
+that the General Assembly declared the human rights enumerated in that
+document to be \"a common standard of achievement for all peoples and
+all nations.\" The General Assembly further declared the need for the
+\"universal and effective recognition,\" of the rights enumerated
+therein, \"both among the peoples of the Member States themselves and
+among the peoples of the territories under their jurisdiction.\" In
+short, the ICCPR and ICESCR clarify that self-determination is an
+essential part of what the UN General Assembly has declared to be \"a
+common standard of achievement for all peoples and all nations,\"
+including the peoples considered to be \"under the jurisdiction of\"
+Member States.
+
+**ARTICLE 3 OF THE UN DRAFT DECLARATION ON THE RIGHTS OF INDIGENOUS
+PEOPLES**
+
+Afticle 3 of the UN Draft Declaration on the Rights of Indigenous
+Peoples was lifted directly from Article 1 of both the ICCPR and the
+ICESCR. As a result, Article 3 reads: \"Indigenous peoples have the
+right of self-determination. By virtue of that right they freely
+determine their political status, and freely choose their economic,
+social and cultural development.\" The drafters of Article 3, intended
+it to mean that all peoples, including Indigenous peoples, have the
+right of self-determination\...\" At present, state government
+delegations to the Inter-Sessional Working Group on the Rights of
+Indigenous Peoples are attempting to give Article 3 the opposite meaning
+than was intended by its drafters: i.e., \"all peoples, except
+Indigenous peoples, have the right of self-determination.\"
+
+However, if Indigenous nations and peoples fall within the category
+\"all peoples and all nations,\" (as found in the Universal Declaration
+of Human Rights) and/or within the category \"peoples under their
+\[Member States\'\] jurisdiction,\" then, according to the ICCPR and the
+ICESCR, as peoples they already are considered to have the right of
+self-determination.
+
+States opposing the principle that Indigenous nations and peoples have
+the right of self-determination have two main options open to them. One,
+attempt to entirely remove Indigenous nations and peoples from the
+category \"peoples\" as found in the United Nations Charter and the
+International Human Rights Covenants. One way for them to achieve this
+objective is by placing Indigenous nations and peoples into the category
+\"individuals under the jurisdiction of democratic Member States.\"
+
+The second option open to State opponents of Indigenous peoples\'
+self-determination is to support some type of nominal Indigenous group
+or collective rights under the dominion and jurisdiction of states. This
+is the U.S. model of federal Indian law, and \"domestic dependent
+nations.\" Under this option the political status of Indigenous nations
+and peoples is predetermined for them by states, but they are then
+\"free to choose their economic, social and cultural development,\"
+subject, however, to the ultimate dominion of the state within which the
+Indigenous peoples find themselves situated. If adopted, this option
+will result in the universal application of a world-wide \"democratic
+colonial framework.\" In either of the above two scenarios, the present
+colonial status quo becomes written into an international instrument.
+
+**DEFINITIONS**
+
+Since the Universal Declaration of Human Rights refers to \"the peoples
+of the territories under their \[Member States\'\] jurisdiction,\" we
+must ask ourselves, \"Is this a reference to what are now commonly
+referred to as Indigenous peoples.\"
+
+The word \"jurisdiction\" is derived from the Latin jus, or juris,
+meaning law, and dictio, from dico, meaning \"to pronounce.\" Thus,
+jurisdiction literally means, \"to pronounce law.\" However, the more
+general definition relevant to this discussion is, \"the extent of the
+authority of a government,\" or \"the district or limit within which
+power may be exercised.\" To speak of \"the peoples of the territories
+under the jurisdiction of Member States, means \"under the authority of
+Member States.\"
+
+The word \"authority\" brings us to, \"power or right to command or act,
+dominion, and control.\" Based on this, the above phrase may be
+understood as meaning \"peoples of the territories under the dominion of
+Member States.\" What is dominion? The term dominion is derived from the
+Sanskrit term damayati and the Latin domanus, meaning \"he who
+subdues.\" It is also traced to the Latin word \"domo,\" meaning, \"to
+subjugate, to subdue, to place into subservience, to tame, to
+domesticate, to cultivate, and to till.\" The Latin word for \"to
+cultivate,\" is colere, \"to colonize.\"
+
+According to Admiral Samuel E. Morison, in The Oxford History of the
+American People, colonization is \"a form of conquest in which a nation
+takes over a distant territory, thrusts in its own people and controls
+or eliminates the native population.\" He goes on to describe what he
+calls \"modern colonization,\" or \"that amazing expansion of trade and
+settlement\" by Europeans \"which resulted in world dominion.\" It is
+this process of modern colonization, he said, which \"produced lasting
+results in America, Australia, New Zealand, and South Africa; even in
+those countries of Asia and Africa which have won their independence
+since World War II.\" (p. 34)
+
+In short, colonization is a process of subjugation, domination, foreign
+control, and unabated resource exploitation. This matches the
+etymological roots of dominion as \"one who subdues.\" Thus, \"the
+history of colonization is not simply that of the migrations of men
+across the world. It is also that of war and of exploitation of races
+and of nations one by the other.\" (Henry C. Morris, The History of
+Colonization, From the Earliest Times to the Present Day, Vol. 1, 1904,
+p. 10)
+
+In the case of the United States, Canada (and the rest of the Americas),
+Australia, New Zealand, and many other parts of the world, the phrase
+\"peoples of the territories under the jurisdiction of Member States\"
+means, \"peoples of the territories historically colonized by Member
+States (or, by the predecessors of Member States).
+
+**THE \"INDIGENOUS PROBLEM\" IS A COLONIAL PROBLEM**
+
+According to Fact Sheet No. 9, \"The Rights of Indigenous Peoples,\"
+issued by the United Nations Office of the High Commissioner for Human
+Rights,\" \"Indigenous peoples or aboriginal peoples are so-called
+because they were living on their lands before settlers came from
+elsewhere.\" The document further says that \"new arrivals\" later
+became dominant \"through conquest, occupation, settlement or other
+means.\" (This language is found on the [first page of Fact Sheet No.
+9](http://www.unhchr.ch/html/menu6/2/fs9.htm).)
+
+Thus, according to the UN High Commissioner for Human Rights, the term
+\"indigenous\" is properly applied to peoples that are subjected to
+dominance, or, stated somewhat differently, it is properly applied to
+peoples over whom dominance has been established. Interestingly, this is
+also the definition of \"colonial peoples,\" according to Anthropologist
+Laura M. Thompson, in her 1943 essay, \"Steps Toward Colonial Freedom:
+Some Long-Range Planning Principles Toward a New World Order.\" It is
+curious that the dominance established by the \"new arrivals\" over
+Indigenous peoples \"through conquest, occupation, settlement or other
+means\" is not characterized by the UN Office of the High Commissioner
+for Human Rights as being in violation of \"the rights of Indigenous
+peoples.\"
+
+In the forward to another of Thompson\'s books, John Collier, who was
+the United States Commissioner of Indian Affairs from 1933-945,
+identified the link between U.S.-Indian policy and colonialism. He
+remarked: \"When in 1941, Harold L. Ickes, then Secretary of the
+Interior, and I, then Indian Commissioner, and Willard W. Beatty, then
+as now Director of Indian Education, solicited the research of which
+this book is one of the products, we were viewing the government\'s
+Indian Service as just one of the many enterprises of colonial
+administration, trusteeship, service to dependencies and minorities, in
+the world as a whole.\" (Laura M. Thompson, Culture In Crisis, A Study
+of the Hopi Indians, 1950, p.12-13).
+
+\"Colonial peoples\" are not the colonizers. Rather, they are the
+peoples subjected to the colonizers\' domination, jurisdiction, or rule.
+Colonial peoples are those nations and peoples who, as a result of
+having been historically subjected to the violent process of
+colonization by settler populations, are held in a perpetual state of
+colonial bondage. Once they have been placed under colonial domination,
+the colonizers then deny them the right to once again be restored to
+their pre-colonial free and independent way of life. It is because
+Indigenous nations and peoples are attempting use the UN Draft
+Declaration on the Rights of Indigenous Peoples to liberate themselves
+from the legacy of colonial domination and oppression that many States,
+particularly the United States, are opposed to Article 3 and other
+specific provisions of that document.
+
+The Universal Declaration of Human Rights, by specifically referring to
+\"peoples of the territories under their \[Member States\'\]
+jurisdiction,\" is referring to peoples living under colonial rule. This
+describes Indigenous nations and peoples. According to the international
+human rights framework, all nations and peoples of the world living
+under colonial rule have the right of self-determination expressed in
+the International Human Rights Covenants. They also have the right to
+use the principle of self-determination to free themselves of colonial
+domination. States, on the other hand, have no right to block or impede
+the liberation of Indigenous nations and peoples without violating
+international human rights standards.
+
+**ARTICLE 3 AND THE FEARS OF \"SETTLER\" STATES**
+
+In its opening General Statement to the 4th UN Inter-Sessional Working
+Group, the United States expressed concern over Article 3 of the Draft
+Declaration on the Rights of Indigenous Peoples. Some, said the US,
+interpret self-determination to mean the right to separate or secede
+from the rest of society. Let us address both of these concerns.
+
+**SEPARATION**
+
+Based on a conversation with an official from the US Department of
+State, the mention of separation is actually a fear that some Indigenous
+peoples will interpret Article 3 to mean that Indigenous nations and
+peoples have a right to independence.
+
+Independence means, \"the state or quality of being independent,\" while
+independent means, \"not influenced or controlled by others.\" By saying
+that it does not want Indigenous nations and peoples to be independent,
+the US is saying that it wants them to remain dependent. As applied to
+originally free and independent peoples who have been subjected to
+colonization, and forced to live under colonial administration such as
+Indian Commissioner John Collier identified, the term \"dependence\"
+means \"subordination or subjection to colonial rule.\" Independence
+means free; dependence means unfree, subjugated, or held in colonial
+bondage.
+
+If it is unacceptable for all peoples and all nations of the world to
+become free and independent of colonial domination, why have so many
+peoples been able to do exactly that since the United Nations was
+established in 1945? This question becomes even more poignant when we
+consider that American Indian nations of the Western Hemisphere, the
+Kanaka Maoli nation of Hawaii, and so many other nations and peoples
+forced to live under the dark cloud of colonialism, lived entirely free
+and independent before the empires of Christendom established their
+colonial domination on the homelands and territories of Indigenous
+nations and peoples.
+
+When the thirteen British colonies along the North American Atlantic
+seaboard made their declaration in the name, and by the authority of the
+people of the colonies, it was\--\"That these united colonies are, and
+of right ought to be, free and independent states.\" They did not have
+any long established precedent such as Indigenous nations and peoples do
+of an original free and independent existence. Yet despite this fact,
+the United States considers it to have been highly moral, and, in fact,
+one of the high points of human history, for the colonial leaders to
+have issued the Declaration of Independence from Great Britain.
+
+The Declaration of Independence marked the beginning of independence for
+the thirteen colonies as free and independent states; it was a condition
+they did not previously have. On the other hand, our efforts as
+Indigenous nations and peoples to free ourselves of colonial domination
+is an effort to RESTORE OURSELVES to the original free and independent
+existence experienced by our ancestors for countless generations, even
+thousands of years, based on our spirituality, our knowledge of the
+natural laws, and the Original Instructions given to us by the Creator.
+This is our moral high ground.
+
+**SECESSION**
+
+When the thirteen British colonies of the North American Atlantic coast
+declared themselves to be free and independent states, and joined
+themselves into a common union, they acceded (meaning, consented) to do
+so. In other words, they freely and willingly agreed to enter into such
+an association. A variation of the word accede is accession, which means
+\"consent, agreement, or approval.\" The word secession is the opposite
+of accession. To secede means, \"to withdraw formally from an alliance,
+federation, or association.\" And all three of these political
+relationships involve the prior act of peoples acceding or consenting to
+those relationships.
+
+The relationship between a dominating empire, state, or colonizing
+people, and the peoples colonized, is not rooted in accession, consent,
+or free agreement. It is rooted in oppression. Therefore, it is
+impossible for nations and peoples forcibly held under colonial bondage
+to secede from such an abusive political relationship. The false issue
+of secession is a non sequitur (it does not follow), and, thus, a
+non-issue designed to be inflamatory and alarmist.
+
+**THE AMERICAN EMPIRE AND INDIGENOUS NATIONS AND PEOPLES**
+
+George Washington once remarked that by winning the Revolutionary War,
+the thirteen states had \"laid the foundation of a great empire.\" \"It
+is only in our united character, as an empire, that our independence is
+acknowledged, that our power can be regarded, or our credit supported
+among foreign nations.\" Thomas Jefferson, who became Washington\'s
+Secretary of State, and the third President of the United States, asked
+Washington in 1784 whether it was \"practicable to keep our empire
+separated\" from the rest of the world. (Richard Van Alstyne, Genesis of
+American Nationalism, p.3) Chief Justice Marshall, in the U.S. Supreme
+Court ruling, Loughborough v. Blake (1820), referred to the United
+States as \"the American empire.\" And, in Downes v. Bidwell (1900), the
+Supreme Court said with regard to the US\'s imperial expansion, \"a
+false step at this time might prove fatal to what Chief Justice Marshall
+called the American Empire.\"
+
+As soon as the thirteen British colonies declared and achieved their own
+free and independent political status, the newly created federal empire
+of states conspired to rob the Original Nations and Peoples of the
+Americas of our lands. They worked had to forcibly deprive our ancestors
+of their own free and independent existence and way of life, and to
+force our nations and peoples under U.S. colonial rule. According to
+historian Richard Van Alstyne, the frame of reference of the American
+colonizers was \"the Roman Empire in the Age of Augustus.\" Indeed, Van
+Alstyne notes, \"with the coming of the Revolution and with the ambition
+to weld the Thirteen Colonies into a national, sovereign state, the
+substitution of the phrase \"American Empire,\" for British came easily
+and naturally.\" (Richard Van Alstyne, The American Empire, Its
+Historical Pattern and Evolution, 1960, p. 3) Now, in 1998, those who
+represent the American empire are attempting to maintain the system of
+colonization built by their ancestors and predecessors.
+
+And upon what foundational principle has that edifice been built?
+According to Temple Bodley, \"And what of the right of the Indians to
+the lands which had been immemorially theirs? The answer is that they
+were regarded by Christian nations as having no rights except such as
+the dominant white nation claiming their country chose to concede to
+them. Under the rule generally recognized by the great powers of Europe,
+uncivilized aborigines, such as the American Indians, became subjects of
+that Christian nation which first discovered and claimed their country;
+their lands became the property of that civilized nation. It was a hard
+rule for the Indians, but it was made by the lions for the lambs.\" (Our
+First Great West, In Revolutionary War, Diplomacy and Politics, 1938, p.
+4)
+
+To this day, the American empire\'s federal Indian law and policy
+remains premised upon the Doctrine of Christian discovery and dominion,
+or upon the claim of an ultimate Christian dominion over \"Indians, who
+were heathens.\" This premise is found in the 1823 US Supreme Court
+ruling Johnson & Graham\'s Lesee v. McIntosh (21 U.S., 8 Wheat., 543).
+This ancient principle of Christendom has been interwoven into the laws
+and Supreme Court rulings of the United States, and now serves as the
+principal foundation of the colonial system under which the U.S. holds
+Indian nations and peoples. It is also used by other English Common law
+countries such as Canada, Australia, and New Zealand against Indigenous
+nations and peoples. The U.S. has used variations of this ideology to
+force other Indigenous nations and peoples, such as the Kanaka Maoli of
+Hawaii, under U.S. dominion. The UN Draft Declaration, including Article
+3, is an effort by Indigenous nations and peoples to use contemporary
+human rights standards to forever eliminate the use of such immoral and
+repugnant doctrines as that of Christian discovery and dominion as the
+basis for relations between any state and Indigenous nations and
+peoples.
+
+**CONCLUSION**
+
+One of the central tenets of the Universal Declaration of Human Rights
+is \"the development of friendly relations between nations.\" The
+Declaration also specifically distinguishes between nations and \"Member
+States\" of the UN. As we have shown above, the expression of human
+rights contained in the Universal Declaration of Human Rights, and in
+the International Human Rights Covenants, are intended to include within
+their scope \"peoples of the territories under their \[Member States\'\]
+jurisdiction.\" When such claimed \"jurisdiction\" by Member States\'
+dominion rests upon claims of empire, and the Christian discovery of
+\"heathens,\" as in the case of the United States, Canada, Australia,
+and New Zealand, this is more in conformity with the Vatican\'s papal
+bulls of the 15th Century than with contemporary human rights standards.
+
+Those papal bulls, it must be remembered, gave Christendom\'s highest
+\"moral\" sanction to the \"subjugation of barbarous nations,\" and \"to
+invade, search out, capture, vanquish, and subdue all
+Saracens\...pagans\...and other enemies of Christ.\" The Christian
+monarchs (the equivalent of modern day states) were to \"reduce their
+\[infidel\] persons to perpetual slavery,\" and \"to take away all their
+possessions and property.\" (The Bull Romanus Pontifex, January 8, 1455.
+See, Frances Gardiner Davenport, European Treaties bearing on the
+History of the United States and its Dependencies to 1648, 1917, p. 23)
+The Bull Inter Caetera issued by Pope Alexander VI on May 4, 1493,
+expressed the pope\'s desire that \"barbarous nations be subjugated,\"
+and that the \"Christian Empire\" be expanded.
+
+Unfortunately, many states that built their colonial systems on the
+legacy of the papal bulls, the English colonial charters, and other
+outmoded ideologies of the past, are now attempting to maintain the
+status quo along with its immoral foundation. And this despite the fact
+that those doctrines have been repudiated. For example, the
+International Court of Justice\'s ruling in the Western Sahara case, the
+Mabo ruling in Australia, and the universal condemnation of Apartheid in
+South Africa. For incalcitrant states to cling to an outdated and
+immoral framework of colonialism just as we are about to usher in the
+21st Century is insulting to Indigenous nations and peoples, and
+counter-productive. It sends the message that Indigenous nations and
+peoples will never be liberated from a system of colonial domination
+that dates back more than five centuries.
+
+------------------------------------------------------------------------
+
+[![Hosted by
+NativeWeb](../www.nativeweb.org/hosted/hostedbynw.gif)](../www.nativeweb.org/index.html)
