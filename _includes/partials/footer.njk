@@ -1,0 +1,43 @@
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 mb-4 p-3">
+                    {% if footer.image %}
+                        <img class="img-fluid mb-3 {% if footer.circle %}rounded-circle{% endif %}" alt="{{metadata.title}}" 
+                        width="{{footer.width}}" height="{{footer.height}}" 
+                        src="{{footer.image}}" loading="lazy"/>
+                    {% endif %}
+                    <h3 class="fw-bold mb-3 custom-footer-title"><strong><a href="{{page.url}}" class="none">{{footer.title}}</a></strong></h3>
+                    <p class="custom-text-sm text-secondary">
+                        {{footer.text|md|safe}}
+                    </p>
+                    <div class="mt-3">
+                        {% for s in footer.social %}<a href="{{s.url}}" title="{{s.title}}" class="text-white me-3 fs-4"><i class="{{s.icon}}"></i></a>{% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-md-3 offset-md-1 col-6 mb-4 p-4">
+                    <h3 class="fw-bold mb-3 custom-footer-title lead text-white">{{footer.menu2.title}}</h3>
+                    <ul class="list-unstyled custom-text-sm">
+                        {% for n in footer.menu2.list %}<li class="ms-3"><a href="{{n.url}}" class="text-white text-decoration-none py-1 d-block">{{n.nav}}</a></li>{% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-3 col-6 p-3 mb-4">
+                    <h3 class="fw-bold mb-3 custom-footer-title lead text-white">{{footer.menu3.title}}</h3>
+                    <ul class="list-unstyled custom-text-sm">
+                        {% for s in footer.menu3.list %}<li class="ms-3"><a href="{{s.url}}" class="text-white text-decoration-none py-1 d-block">{{s.nav}}</a></li>{% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-0 custom-hr">
+            <div class="text-center">
+                <p class="mb-0 custom-text-sm text-light"><small>&copy; <span id="copyright-year"></span>.
+                    {{footer.copyrights}} | Built with <a href="https://11ty.dev" class="none" target="_blank" rel="noopener noreferrer">11ty</a> | 
+                    managed by <a href="https://adamdjbrett.com" target="_blank" class="none" rel="noopener noreferrer">Adam Dj Brett</a>
+                </small>
+                </p>
+            </div>
+        </div>
+    </footer>

@@ -1,0 +1,22 @@
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white 
+        shadow-lg fixed-top custom-navbar">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="{{metadata.url}}" title="{{metadata.title}}">
+                    {% if navbar.icon.show %}
+                    <img class="img-fluid {% if navbar.icon.circle %}rounded-circle{% endif %}" width="{{navbar.icon.width}}" height="{{navbar.icon.height}}" alt="{{metadata.title}}" src="{{navbar.icon.image}}"/>
+                    {% else %}{{navbar.title}}
+                    {% endif %}
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <small>Menu</small> <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        {% for n in navbar.list %}<li class="nav-item"><a class="nav-link {% if n.url == page.url %} active{% endif %}" href="{{n.url}}">{{n.nav}}</a></li>{% endfor %}
+                        <li class="nav-item"><a class="nav-link custom-contact-link text-center" href="{{navbar.button.url}}">{{navbar.button.text}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>

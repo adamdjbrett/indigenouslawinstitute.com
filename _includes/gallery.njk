@@ -1,0 +1,143 @@
+---
+layout: base.njk
+---
+<style>
+    .modal-custom-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1050;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75); 
+        display: none; 
+        overflow-x: hidden;
+        overflow-y: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-custom-dialog {
+        max-width: 90%;
+        width: 1200px;
+        margin: 1.75rem auto;
+        transition: transform 0.4s ease-out;
+        transform: translateY(-100px);
+    }
+    .modal-custom-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        background-clip: padding-box;
+        border-radius: 1rem;
+        outline: 0;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
+        
+        overflow-x: hidden; 
+    }
+    .modal-custom-show .modal-custom-dialog {
+        transform: translateY(0);
+    }
+    .modal-custom-show {
+        display: flex; 
+    }
+    
+    @media (max-width: 768px) {
+        .modal-custom-dialog {
+            margin: 0.5rem;
+            max-width: 100%;
+        }
+    }
+    .modal-body {
+        overflow-x: hidden;
+    }
+
+    .gallery-button-style {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        text-align: left;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+    }
+</style>
+
+<section id="gallery" class="py-5 container-fluid bg-white">
+    <div class="container">
+        <div class="mb-5 text-center">
+            <h2 class="custom-heading"><strong><a href="{{page.url}}" 
+                class="none">{{title}}</a></strong></h2>
+            <p>{{description}}</p>
+        </div>
+        
+        <div class="row g-4">
+            {% for j in galleries.list %}
+            <div class="col-md-4 col-sm-6">
+                <button type="button" 
+                   class="gallery-button-style gallery-trigger"                   
+                   data-title="{{ j.title | striptags | escape }}"
+                   data-description="{{ j.description | striptags | escape }}"
+                   data-image="{{ j.image | escape }}"
+                   data-url="{{ j.url | escape }}"                   
+                   data-text="{{ j.text | md | safe | replace('\n', ' ') | replace('"', "'") | escape }}"
+                   onclick="openGalleryModal(this)"
+                >
+                    <div class="custom-gallery-item">
+                        <img src="{{j.image}}" class="img-fluid w-100" alt="{{j.title}}" loading="lazy">
+                    </div>
+                    <h4 class="custom-heading mt-3 fs-5 text-dark">{{ j.title }}</h4>
+                    <p class="custom-text-sm text-muted">{{ j.description }}</p>
+                </button>
+            </div>
+            {% endfor %}
+    </div>
+</section>
+
+<div class="modal-custom-backdrop" id="galleryDetailModal" onclick="closeGalleryModal(event)">
+    <div class="modal-custom-dialog modal-xl modal-dialog-centered modal-dialog-scrollable p-3">
+        <div class="modal-custom-content rounded-xl shadow-lg border-0">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold custom-title p-3" id="galleryDetailModalLabel"></h5>
+                <button type="button" class="btn btn-close btn-dark me-3 p-3" onclick="closeGalleryModal(event)"
+                 aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-0">
+                <div class="row g-4">
+                    <div class="col-md-7 p-3 p-md-3">
+                        <img id="modal-image" src="" alt="{{metadata.title}}" 
+                        class="img-fluid w-100 rounded-3 shadow-sm mb-4" width="700" height="400"
+                        loading="lazy">
+                    </div>
+
+                    <div class="col-md-5 p-3 p-md-3">
+                        <h6 class="fw-bold custom-heading mb-3" style="color: var(--accent-color);">
+                            {{galleries.modal.about}}</h6>
+                        <p class="custom-text-sm text-muted" id="modal-description"></p>
+                        <hr class="my-3">
+                       <!-- <h6 class="fw-bold custom-heading mb-3" style="color: var(--accent-color);">Visit Project</h6> -->
+                         <h6 class="fw-bold custom-heading mb-3" style="color: var(--accent-color);">
+                                {{galleries.modal.sumary}}</h6>
+                            <p class="custom-text-sm" id="modal-text"></p>
+                        <hr class="my-3">
+                                <a id="modal-url-link" href="#" target="_blank" class="btn btn-dark custom-btn w-100 btn-lg mb-3">
+                           {{galleries.modal.button}}
+                        </a>
+                    </div>
+
+
+
+                </div>
+            </div>
+           <!--  <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary" onclick="closeGalleryModal(event)">Tutup</button>
+            </div>
+            -->
+        </div>
+    </div>
+</div>

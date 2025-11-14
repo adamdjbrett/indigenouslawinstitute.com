@@ -1,0 +1,87 @@
+# Gallery WIdget
+title: Our Gallery
+description: Our galleries portfolio
+button: 
+  text: Explore all
+  url: /gallery/
+
+# Modal Gallery
+modal: 
+  about: About This Project
+  sumary: Sumary
+  button: Visit Project  
+
+
+# Gallery List
+list: 
+  - title: 11ty Editorial
+    description: A Complete editorial themes for 11ty
+    url: https://adamdjbrett.com
+    image: https://images.unsplash.com/photo-1542744094-3a31f272c490?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVzaWduJTIwd2VifGVufDB8fDB8fHww
+    text: | 
+      Editorial 11ty is a new and modern editorial themes for your project, develope by 
+      [Adam Dj Brett](https://adamdjbrett.com)
+  
+  
+  - title: 11ty Backflip
+    description: A Complete backflip themes for 11ty
+    url: https://adamdjbrett.com
+    image: https://images.unsplash.com/photo-1476357471311-43c0db9fb2b4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGVzaWduJTIwd2VifGVufDB8fDB8fHww
+    text: | 
+      Editorial 11ty is a new and modern editorial themes for your project, develope by 
+      [Adam Dj Brett](https://adamdjbrett.com)
+  
+  
+  - title: 11ty Nookie
+    description: A Complete nookie themes for 11ty
+    url: https://adamdjbrett.com
+    image: https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww
+    text: | 
+      Editorial 11ty is a new and modern editorial themes for your project, develope by 
+      [Adam Dj Brett](https://adamdjbrett.com)
+  
+  
+  - title: 11ty Mousepad
+    description: A Complete mousepad themes for 11ty
+    url: https://adamdjbrett.com
+    image: https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww
+    text: | 
+      Editorial 11ty is a new and modern editorial themes for your project, develope by 
+      [Adam Dj Brett](https://adamdjbrett.com)
+  
+  
+  - title: 11ty Delos
+    description: A Complete delos themes for 11ty
+    url: https://adamdjbrett.com
+    image: https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D
+    text: | 
+      Editorial 11ty is a new and modern editorial themes for your project, develope by 
+      [Adam Dj Brett](https://adamdjbrett.com)
+  
+  
+  - title: 11ty Helios
+    description: A Complete helios themes for 11ty
+    url: https://adamdjbrett.com
+    image: https://images.unsplash.com/photo-1542744095-0d53267d353e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D
+    text: | 
+      Editorial 11ty is a new and modern editorial themes for your project, develope by 
+      [Adam Dj Brett](https://adamdjbrett.com)
+  
+  
+  - title: 11ty Carl Zeiss
+    description: A Complete Carl Zeiss themes for 11ty
+    url: https://adamdjbrett.com
+    image: https://images.unsplash.com/photo-1635405050330-b0824eb1bf26?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D
+    text: | 
+      Editorial 11ty is a new and modern editorial themes for your project, develope by 
+      [Adam Dj Brett](https://adamdjbrett.com)
+  
+  
+  - title: 11ty Nikkor
+    description: A Complete nikkor themes for 11ty
+    url: https://adamdjbrett.com
+    image: https://images.unsplash.com/photo-1487338875411-8880f74114a2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D
+    text: | 
+      Editorial 11ty is a new and modern editorial themes for your project, develope by 
+      [Adam Dj Brett](https://adamdjbrett.com)
+  

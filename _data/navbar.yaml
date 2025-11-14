@@ -1,0 +1,26 @@
+# Nav title
+title: ILI
+
+# Icon Nav - switch false if you want use title only
+icon: 
+  show: true
+  image: "https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png"
+  width: "40"
+  height: "40"
+  circle: true
+
+# Nav List
+list: 
+  - nav: Home
+    url: /
+  - nav: Blog
+    url: /blog/
+  - nav: Gallery
+    url: /gallery/
+  - nav: About
+    url: /about/
+
+# Nav Button
+button: 
+  text: Contact Now
+  url: /contact/
