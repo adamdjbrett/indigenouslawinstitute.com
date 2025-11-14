@@ -1,0 +1,50 @@
+# Blog List Widget
+blog: 
+  title: Lastest Post
+  description: Update form our blog post
+  button: 
+    text: Explore all
+    url: /blog/
+
+
+# Info List Widget
+info: 
+  title: Why Chose Us
+  description: Becasue we are profesional for your projects
+  list: 
+    - icon: fab fa-eleventy
+      title: Eleventy
+      text: lorep ipsum dolor siamet amet jabang bayi lanang wedok temenan iki saestu yakinlah sumpah
+    - icon: fab fa-bootstrap
+      title: Bootstrap
+      text: lorep ipsum dolor siamet amet jabang bayi lanang wedok temenan iki saestu yakinlah sumpah
+    - icon: fab fa-cloudflare
+      title: Cloudflare
+      text: lorep ipsum dolor siamet amet jabang bayi lanang wedok temenan iki saestu yakinlah sumpah
+
+# Contact Form Widget
+contact: 
+  formspree_id: "xxx"
+  title: Contact Us
+  form: 
+    title: Contact Form
+    button: Sent Message
+  map_title: FInd Us
+  map_image: 
+    show: true
+    image: "https://placehold.co/600x400"
+    url: "https://maps.app.goo.gl/7bNNqeQfa6X4RjtbA"
+    alt: "My locations"
+  text: |
+     you can visit on sesame street 76 , USA.
+  list: 
+    - icon: fas fa-map
+      text: Sesame Street 76 , USA
+      url: /
+    - icon: fas fa-phone
+      text: "(1) 234 5678"
+      url: "tel:+12345678"
+    - icon: fas fa-envelope
+      text: info@domain.com
+      url: "mailto:info@domain.com"
+

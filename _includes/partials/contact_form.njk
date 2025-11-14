@@ -1,0 +1,43 @@
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 custom-heading">{{widget.contact.title}}</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card p-4 h-100 shadow-sm custom-quote-card">
+                            <h4 class="custom-heading mb-4">{{widget.contact.form.title}}</h4>
+                            <form action="{{widget.contact.formspree_id}}" method="post">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="name" name="Name" placeholder="Your Name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" name="Email" placeholder="Your Email">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" id="message" name="message" placeholder="Input Message..."></textarea>
+                                </div>
+                                <button type="submit" class="btn custom-btn w-100">{{widget.contact.form.button}}</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card p-4 h-100 shadow-sm custom-quote-card">
+                            <h4 class="custom-heading">{{widget.contact.map_title}}</h4>
+                            <p class="custom-text">
+                                {{widget.contact.text | md |safe}}
+                            </p>
+                            <div class="map-placeholder mt-1" style="height: 250px; background-color: 
+                            #f0f0f0; border-radius: 8px;">
+                                <a href="{{widget.contact.map_image.url}}" title="{{widget.contact.map_image.alt}}"><img src="{{widget.contact.map_image.image}}" alt="{{widget.contact.map_image.alt}}" 
+                                class="img-fluid w-100 h-100 rounded-3" style="object-fit: cover;" loading="lazy"></a>
+                            </div>
+                            <div class="mt-3 custom-text-sm">
+                                {% for t in widget.contact.list %}<p><i class="{{t.icon}} me-2" 
+                                style="color: var(--accent-color);"></i> 
+                                <a href="{{t.url}}" class="none">{{t.text}}</a></p>{% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>

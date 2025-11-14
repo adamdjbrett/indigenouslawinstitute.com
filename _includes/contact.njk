@@ -1,0 +1,32 @@
+---
+layout: base.njk
+---
+<div class="container">
+<div class="col-md-8 mx-auto p-3 p-md-5 mt-3 text-center">
+<h1 class="custom-title">
+  <strong><a class="none" href="{{page.url}}">{{title}}</a></strong></h1>
+<h2 class="lead">{{description}}</h2>
+</div>
+{% if image %}<div class="col-md-10 mx-auto"><img class="img-fluid rounded shadow mt-3" alt="{{title}}" width="100%" height="100%"
+src="{{image}}"/></div>{% endif %}
+<div class="text-start col-md-8 mx-auto mt-5 mb-5 p-3">
+{{content|safe}}
+<div class="card p-4 h-100 shadow-sm">
+<h4 class="custom-heading mb-4">{{widget.contact.form.title}}</h4>
+<form action="{{widget.contact.formspree_id}}" method="post">
+<div class="mb-3">
+<input type="text" class="form-control" id="name" name="Name" placeholder="Your Name">
+</div>
+<div class="mb-3">
+<input type="email" class="form-control" id="email" name="Email" placeholder="Your Email">
+</div>
+<div class="mb-3">
+<textarea class="form-control" rows="4" id="message" name="message" placeholder="Input Message..."></textarea>
+</div>
+<button type="submit" class="btn custom-btn w-100">{{widget.contact.form.button}}</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+{% include "partials/widget.njk" %}

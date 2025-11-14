@@ -1,0 +1,63 @@
+# Footer Menu 1
+
+# Footer title
+title: "Indigenous Law Institute"
+
+# Footer IMage
+image: "https://getbootstrap.com/docs/5.3/assets/img/favicons/apple-touch-icon.png"
+
+# Footer image width and height
+width: "80"
+height: "80"
+# image circle - switch false if you want default
+circle: true
+# Footer text
+text: |
+  welcome this is a footer area with markdown - contact me [Adam Dj Brett](https://adamdjbrett.com)
+
+# Footer Menu 2
+menu2: 
+ title: Menu
+ list: 
+  - nav: Home
+    url: /
+  - nav: About
+    url: /about/
+  - nav: Blog
+    url: /blog/
+  - nav: Gallery
+    url: /gallery/
+  - nav: Contact
+    url: /contact/
+
+# Footer Menu 3
+menu3: 
+ title: Refference
+ list: 
+  - nav: Ammau
+    url: /amau/
+  - nav: New Study
+    url: /newstudy/
+  - nav: Dovision
+    url: /dovision/
+  - nav: Liberation
+    url: /global_liberation/
+  - nav: Perspect
+    url: /perspect/
+
+# Footer Social area
+social: 
+ - icon: fab fa-x-twitter
+   title: Follow Our X
+   url: https://x.com
+ - icon: fab fa-youtube
+   title: Follow Our Youtube
+   url: https://youtube.com
+ - icon: fab fa-instagram
+   title: Follow Our Instagram
+   url: https://youtube.com
+
+
+
+# Footer copyrights
+copyrights: "Indigenous Law Institute"

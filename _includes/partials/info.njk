@@ -1,0 +1,15 @@
+        <section id="services" class="py-5 text-white custom-dark-bg">
+            <div class="container text-center">
+                <h2 class="mb-4 custom-heading text-white">{{widget.info.title}}</h2>
+                <p class="lead mb-5 text-light">{{widget.info.description}}</p>
+                <div class="row">
+                    {% for t in widget.info.list %}<div class="col-md-4 mb-4">
+                        <div class="custom-feature-box p-4">
+                            <i class="{{t.icon}} fs-2 mb-3 text-center" style="color: var(--accent-color);"></i>
+                            <h3><strong>{{t.title}}</strong></h3>
+                            <p class="custom-text-sm text-light">{{t.text|md|safe}}</p>
+                        </div>
+                    </div>{% endfor %}
+                </div>
+            </div>
+        </section>

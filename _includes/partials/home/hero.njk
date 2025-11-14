@@ -1,0 +1,21 @@
+<section id="hero" class="py-5">
+            <div class="container">
+                <div class="row align-items-center g-5 p-3">
+                    <div class="col-md-6 mb-4 mb-md-0 p-3">
+                        <h1 class="display-3 custom-title col-md-10">
+                           <strong><a href="{{page.url}}" class="none">{{hero.title}}</a></strong>
+                        </h1>
+                        <p class="lead custom-text mt-3 col-md-11">
+                            {{hero.description}}
+                        </p>
+                        {% for s in hero.button %}
+                        <a href="{{s.url}}" class="btn btn-dark btn-lg custom-btn mt-4">{{s.text}}</a>
+                        {% endfor %}
+                    </div>
+                     <div class="col-md-6 rounded p-3">
+                        <div class="bgs" style="background-image: url('{{hero.image}}');">
+                </div>
+                    </div>
+                </div>
+            </div>
+</section>
