@@ -3,6 +3,7 @@ title: Scholar Calls on Pope
 description: "Scholar Calls on Pope to Pull the Bull from Under U.S. Indian Law"
 date: 1992-10-29
 image: 
+show_toc: true
 show_post_list: false
 show_info: false
 show_contact_form: false

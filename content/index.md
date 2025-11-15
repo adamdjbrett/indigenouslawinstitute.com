@@ -25,4 +25,9 @@ intro:
    - text: The Domination Translator
    - text: Civilization as Domination
    - text: Challenging the Claim of a Right of Domination
+
+# Featured hide or show widget
+show_post_list: false
+show_info: false
+show_contact_form: false
 ---

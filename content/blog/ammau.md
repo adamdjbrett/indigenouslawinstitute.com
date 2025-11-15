@@ -3,6 +3,7 @@ title: A MAU A MAU
 description: "to continue forever"
 date: 2000-01-01
 image: 
+show_toc: true
 show_post_list: false
 show_info: true
 show_contact_form: true

@@ -3,6 +3,7 @@ title: Toward an Oglala Lakota Constitution
 description: "Toward an Oglala Lakota Constitution Statement of Basic Principles"
 date: 2004-06-01
 image: 
+show_toc: true
 show_post_list: false
 show_info: true
 show_contact_form: true

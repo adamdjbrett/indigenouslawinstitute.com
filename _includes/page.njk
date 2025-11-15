@@ -8,9 +8,12 @@ layout: base.njk
 <h2 class="lead">{{description}}</h2>
 </div>
 {% if image %}<div class="col-md-10 mx-auto"><img class="img-fluid rounded shadow mt-3" alt="{{title}}" width="100%" height="100%"
-src="{{image}}"/></div>{% endif %}
+src="{{image}}"/>{% if image_copyrights %}<p class="ms-3 mt-1"><small>{{image_copyrights}}</small></p>{% endif %}</div>{% endif %}
 <div class="text-start col-md-8 mx-auto mt-5 mb-5 p-3">
+{% if show_toc %}<div class="p-3"><h3><strong>{{widget.table_of_content}}</strong></h3>{{ content | toc | safe }}</div>{% endif %}
+  <heading-anchors>
 {{content|safe}}
+</heading-anchors>
 </div>
 </div>
 </div>

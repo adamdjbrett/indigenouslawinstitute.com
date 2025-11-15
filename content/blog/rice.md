@@ -3,6 +3,8 @@ title: "Comment: Rice v. Cayetano"
 description: "Justice Department Evidence Contradicts Supreme Court Decision"
 date: 2000-03-13
 image: 
+image_copyrights: 
+show_toc: true
 show_post_list: false
 show_info: false
 show_contact_form: false

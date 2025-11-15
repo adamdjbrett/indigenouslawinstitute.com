@@ -2,6 +2,8 @@
 title: Indigenous Law Institute Information
 description: "The Indigenous Law Institute assists American Indian and other Indigenous communities to work toward a future of restoration and healing."
 image: 
+image_copyrights: 
+show_toc: true
 show_post_list: false
 show_info: false
 show_contact_form: false

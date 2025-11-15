@@ -3,6 +3,8 @@ title: "Comment: Pope Asks Forgiveness"
 description: "Will The Vatican Repeal The Inter Cetera?"
 date: 2000-03-15
 image: 
+image_copyrights: 
+show_toc: true
 show_post_list: false
 show_info: false
 show_contact_form: false

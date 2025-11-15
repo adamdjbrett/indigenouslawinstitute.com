@@ -3,6 +3,7 @@ title: Toward the Global Liberation of All Nations and Peoples
 description: "Toward the Global Liberation of All Nations and Peoples by Steve Newcomb (Shawnee/Lenape) Indigenous Law Institute"
 date: 2004-12-20
 image: 
+show_toc: true
 show_post_list: false
 show_info: true
 show_contact_form: false

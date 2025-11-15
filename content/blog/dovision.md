@@ -3,6 +3,7 @@ title: Declaration of Vision
 description: "DECLARATION OF VISION Toward The Next 500 Years"
 date: 1994-12-31
 image: 
+show_toc: true
 show_post_list: false
 show_info: true
 show_contact_form: true

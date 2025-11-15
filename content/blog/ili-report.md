@@ -3,6 +3,8 @@ title: "Failure of the United States Indian Claims Commission to File a Report w
 description: "On Behalf of the Western Shoshone National Council Prepared by Steven Newcomb"
 date: 2003-01-01
 image: 
+image_copyrights: 
+show_toc: true
 show_post_list: false
 show_info: false
 show_contact_form: false

@@ -3,6 +3,8 @@ title: "Five Hundred Years of Injustice"
 description: "The Legacy of Fifteenth Century Religious Prejudice by Steve Newcomb"
 date: 1992-10-31
 image: 
+image_copyrights: 
+show_toc: true
 show_post_list: false
 show_info: false
 show_contact_form: false

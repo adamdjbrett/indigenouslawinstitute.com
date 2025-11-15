@@ -3,6 +3,8 @@ title: "Pu'uhonua Peace Pact"
 description: "Submitted to The Hague Appeal for Peace May 11-15, 1999 The Hague, Netherlands"
 date: 1999-05-15
 image: 
+image_copyrights: 
+show_toc: true
 show_post_list: false
 show_info: false
 show_contact_form: false

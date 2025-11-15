@@ -7,6 +7,9 @@ blog:
     url: /blog/
 
 
+# TOC Widget title
+table_of_content: Table of Content
+
 # Info List Widget
 info: 
   title: Why Chose Us
@@ -29,6 +32,7 @@ contact:
   form: 
     title: Contact Form
     button: Sent Message
+  show_map: false
   map_title: Find Us
   map_image: 
     show: false

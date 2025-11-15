@@ -3,6 +3,8 @@ title: "Revoke the Inter Cetera Bull"
 description: "Indian people are denied their rights today simply because they were not Christians at the time of European arrival."
 date: 1994-10-31
 image: 
+image_copyrights: 
+show_toc: true
 show_post_list: false
 show_info: false
 show_contact_form: false

@@ -1,7 +1,9 @@
         <section id="contact" class="py-5">
             <div class="container">
-                <h2 class="text-center mb-5 custom-heading">{{widget.contact.title}}</h2>
+                <h3 class="text-center mb-5 custom-heading">{{widget.contact.title}}</h3>
                 <div class="row g-4">
+
+                    {% if widget.contact.show_map %}
                     <div class="col-md-6">
                         <div class="card p-4 h-100 shadow-sm custom-quote-card">
                             <h4 class="custom-heading mb-4">{{widget.contact.form.title}}</h4>
@@ -19,7 +21,6 @@
                             </form>
                         </div>
                     </div>
-
                     <div class="col-md-6">
                         <div class="card p-4 h-100 shadow-sm custom-quote-card">
                             <h4 class="custom-heading">{{widget.contact.map_title}}</h4>
@@ -38,6 +39,25 @@
                             </div>
                         </div>
                     </div>
+                    {% else %}
+                    <div class="col-md-8 mx-auto">
+                        <div class="card p-4 h-100 shadow-sm custom-quote-card">
+                            <h4 class="custom-heading mb-4">{{widget.contact.form.title}}</h4>
+                            <form action="{{widget.contact.formspree_id}}" method="post">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="name" name="Name" placeholder="Your Name">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" name="Email" placeholder="Your Email">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" rows="4" id="message" name="message" placeholder="Input Message..."></textarea>
+                                </div>
+                                <button type="submit" class="btn custom-btn w-100">{{widget.contact.form.button}}</button>
+                            </form>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
         </section>

@@ -1,15 +1,24 @@
-import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
+import {IdAttributePlugin,InputPathToUrlTransformPlugin,HtmlBasePlugin,} from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import yaml from "js-yaml";
-import pluginFilters from "./_config/filters.js";
+import { execSync } from "child_process";
 import fontAwesomePlugin from "@11ty/font-awesome";
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
+import markdownItFootnote from "markdown-it-footnote";
+import markdownItAttrs from 'markdown-it-attrs';
+import markdownItTableOfContents from "markdown-it-table-of-contents";
+import pluginTOC from 'eleventy-plugin-toc';
+import pluginFilters from "./_config/filters.js";
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-export default async function(eleventyConfig) {
-	// Register Font Awesome plugin (was previously in a stray duplicate export)
+export default async function (eleventyConfig) {
+	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+			return false;
+		}
+	});
 	eleventyConfig.addPlugin(fontAwesomePlugin, {
 		transform: 'i[class]',
 		shortcode: false,
@@ -18,40 +27,7 @@ export default async function(eleventyConfig) {
 			class: 'icon-svg'
 		}
 	});
-	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
-			return false;
-		}
-	});
 
-	eleventyConfig
-		.addPassthroughCopy({
-			"./public/": "/"
-		})
-		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
-	eleventyConfig.addWatchTarget("css/**/*.css");
-
-	eleventyConfig.addBundle("css", {
-		toFileDirectory: "dist",
-		bundleHtmlContentFromSelector: "style",
-	});
-		const md = new markdownIt({
-		html: true,
-		breaks: true,
-		linkify: true,
-	});
-	eleventyConfig.addFilter("md", function (content) {
-		return md.render(content);
-	});
-	
-	eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
-	eleventyConfig.addBundle("js", {
-		toFileDirectory: "dist",
-		bundleHtmlContentFromSelector: "script",
-	});
-	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
-		preAttributes: { tabindex: 0 }
-	});
 	  eleventyConfig.addFilter("featuredPosts", function(collection) {
     return collection.filter(post => post.data.tags && post.data.tags.includes('featured'));
 	 });
@@ -60,57 +36,134 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addCollection("authors", function(collectionApi) {
 		return collectionApi.getFilteredByGlob("./content/authors/*.md");
 	});
-	
+	eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
+	eleventyConfig
+		.addPassthroughCopy({
+			"./public/": "/",
+		})
+		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
+
+	eleventyConfig.addWatchTarget("css/**/*.css");
+	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}");
+
+	eleventyConfig.addBundle("css", {
+		toFileDirectory: "dist",
+		bundleHtmlContentFromSelector: "style",
+	});
+	eleventyConfig.addBundle("js", {
+		toFileDirectory: "dist",
+		bundleHtmlContentFromSelector: 'script[type="module"]',
+	});
+
+	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
+		preAttributes: { tabindex: 0 },
+	});
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+	const md = new markdownIt({
+		html: true,
+		breaks: true,
+		linkify: true,
+	});
+	eleventyConfig.addFilter("md", function (content) {
+		return md.render(content);
+	});
+
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true,
+      permalink: true,
+    typographer: true,
+      permalinkClass: "direct-link",
+      permalinkSymbol: "#"
+  };
+
+	
+   let markdownLib = markdownIt(options).use(markdownItAttrs).use(markdownItFootnote).use(markdownItTableOfContents);
+  eleventyConfig.setLibrary("md", markdownLib);
+	  eleventyConfig.amendLibrary("md", mdLib => {
+		mdLib.use(markdownItAnchor, {
+			permalink: markdownItAnchor.permalink.ariaHidden({
+				placement: "after",
+				class: "header-anchor",
+				symbol: "",
+				ariaHidden: false,
+			}),
+			level: [1,2,3,4],
+			slugify: eleventyConfig.getFilter("slugify")
+		});
+	});
+	  eleventyConfig.addPlugin(pluginTOC, {
+		tags: ['h2', 'h3', 'h4', 'h5'],
+		  id: 'toci', 
+		  class: 'list-group',
+		ul: true,
+		flat: true,
+		wrapper: 'div'
+	  });
+
+	eleventyConfig.on("eleventy.after", () => {
+		execSync(`npx pagefind --site _site --glob \"**/*.html\"`, {
+			encoding: "utf-8",
+		});
+	});
+
+	eleventyConfig.addPlugin(IdAttributePlugin, {
+		slugify: (text) => {
+			const slug = eleventyConfig.getFilter("slugify")(text);
+			return `print-${slug}`;
+		},
+	});
+
 	eleventyConfig.addPlugin(feedPlugin, {
-		type: "atom",
+		type: "atom", // or "rss", "json"
 		outputPath: "/feed/feed.xml",
 		stylesheet: "pretty-atom-feed.xsl",
 		templateData: {
 			eleventyNavigation: {
 				key: "Feed",
-				order: 4
-			}
+				order: 10,
+			},
 		},
 		collection: {
-			name: "posts",
-			limit: 10,
+			name: "all",
+			limit: 20,
 		},
 		metadata: {
 			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
+			title:
+				"Editorial",
+			subtitle:
+				"Editorial 11ty.",
+			base: "https://www.example.com/",
 			author: {
-				name: "Your Name"
-			}
-		}
+				name: "adamdjbrett",
+			},
+		},
 	});
+
 	eleventyConfig.addPlugin(pluginFilters);
-	eleventyConfig.addPlugin(IdAttributePlugin, {
-	});
+
+	eleventyConfig.addPlugin(IdAttributePlugin, {});
+
 	eleventyConfig.addShortcode("currentBuildDate", () => {
-		return (new Date()).toISOString();
+		return new Date().toISOString();
 	});
-};
+}
 
 export const config = {
-	templateFormats: [
-		"md",
-		"njk",
-		"html",
-		"liquid",
-		"11ty.js",
-	],
-	markdownTemplateEngine: "njk",
-	htmlTemplateEngine: "njk",
-	dir: {
-		input: "content",
-		includes: "../_includes",
-		data: "../_data",
-		output: "_site"
-	},
+	templateFormats: ["md", "njk", "html", "liquid", "11ty.js"],
 
+	markdownTemplateEngine: "njk",
+
+	htmlTemplateEngine: "njk",
+
+	dir: {
+		input: "content", // default: "."
+		includes: "../_includes", // default: "_includes" (`input` relative)
+		data: "../_data", // default: "_data" (`input` relative)
+		output: "_site",
+	},
 };
