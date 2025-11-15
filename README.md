@@ -1,6 +1,7 @@
 # CHANGELOG
-1. remove find us from contact widget
+1. set filter to disable find us in the contact widget
 2. disable contact form on homepage
+3. disable Why Chose Us
 3. enable image_credit: front matter and have it show under the images left aligned in plain text.
 4. Enable Eleventy Heading Anchors and linking to anchors
 5. fix nesting of heading tags on homepage
@@ -9,10 +10,6 @@
     1. author: fred-whitehead
     1. author: valerie-taliman
     1. author: jerry-reynolds
-7. sitemap.xml
-8. feed.xml
-9. humans.txt.njk
-10. robots.txt.njk
 11. add schemea.njk to be filled in
 12. fix notices on npm run
 ## optiona

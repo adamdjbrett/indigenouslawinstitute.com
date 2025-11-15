@@ -22,12 +22,8 @@ Co-Founders and Co-Directors, Indigenous Law Institute
 June 2004
 
 - - -
+Please Forward Comments To: B. Kills Straight \| [Steven Newcomb](https://stevennewcomb.com/about/)
 
-| Please Forward Comments To: |
-| --- | --- |
-| B. Kills Straight | [Steven Newcomb](https://stevennewcomb.com/about/) |
-|   | P.O. Box 188 |
-|   | Alpine, CA 91901 |
 
 - - -
 
