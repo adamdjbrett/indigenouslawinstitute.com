@@ -1,19 +1,18 @@
 # CHANGELOG
-1. set filter to disable find us in the contact widget
-2. disable contact form on homepage
-3. disable Why Chose Us
-3. enable image_credit: front matter and have it show under the images left aligned in plain text.
-4. Enable Eleventy Heading Anchors and linking to anchors
+1. show name in header next logo. show name in blue ```#171b39```
+2. set filter to disable find us in the contact widget
+3. set filter to disable contact form on homepage
+3. set filter to disable Why Chose Us
+3. enable ```image_credit:``` front matter and have it show under the images left aligned in plain text.
+4. Enable Eleventy Heading Anchors and linking to anchors (Get TOC working on long posts) like [/ili-report](/ili-report) and [ili-info](/ili_info/)
+5. Enable Eleventy Footnotes
 5. fix nesting of heading tags on homepage
-6. enable authors. Individually authored posts only.
-    1. author: steven-newcomb
-    1. author: fred-whitehead
-    1. author: valerie-taliman
-    1. author: jerry-reynolds
 11. add schemea.njk to be filled in
-12. fix notices on npm run
-## optiona
+
+## Optional
 12. is search possible? like a /search/ page
+~~12. fix notices on npm run~~
+~~6. enable authors. Individually authored posts only.~~
  
 
 

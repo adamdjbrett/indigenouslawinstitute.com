@@ -2,7 +2,7 @@
 layout: contact.njk
 title: Contact Us
 description: "Contacting Indigenous Law Institute"
-image: /img/ladawn-preuninger-Gtu0dYVny_A-unsplash.jpg
+image: /img/ladawn-preuninger-Gtu0dYVny_A-unsplash.webp
 image_credit: Photo by LaDawn Preuninger on Unsplash
 show_post_list: false
 show_info: false

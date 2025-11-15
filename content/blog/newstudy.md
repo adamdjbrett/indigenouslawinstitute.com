@@ -13,7 +13,7 @@ tags:
   - christianity
 ---
 
-## New Studies by Native American Scholar Document   the Role of Christianity in Historic Oppression
+## New Studies by Native American Scholar Document the Role of Christianity in Historic Oppression
 
 ### by Fred Whitehead
 

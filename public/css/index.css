@@ -274,7 +274,12 @@ a:hover, a:focus {
       overflow: hidden;
     }
 
-
+.icon-svg {
+  display: inline;
+  vertical-align: middle;
+  height: 1em;
+  width: 1em;
+}
 
 @media (max-width: 400px) {
 .bgs {

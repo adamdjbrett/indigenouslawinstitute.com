@@ -1,10 +1,10 @@
 # Nav title
-title: ILI
+title: Indigenous Law Institute
 
 # Icon Nav - switch false if you want use title only
 icon: 
   show: true
-  image: "/img/indigenous-law-institute-xl.svg"
+  image: "/img/indigenous-law-institute-xxl.svg"
   width: "100"
   height: "100"
   circle: true

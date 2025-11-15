@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+<div class="container">
+<div class="col-md-8 mx-auto p-3 p-md-5 mt-3 text-center">
+<h1 class="custom-title">
+  <strong>{{name or title}}</strong></h1>
+{% if organization %}<h2 class="lead">{{organization}}</h2>{% endif %}
+</div>
+<div class="text-start col-md-8 mx-auto mt-5 mb-5 p-3">
+{% if bio %}<div class="author-bio mb-4">{{bio | safe}}</div>{% endif %}
+
+{% if social and social.length %}
+<h2 class="custom-heading mt-5 mb-3">Links</h2>
+<div class="d-flex gap-3 mb-4 flex-wrap">
+{%- for s in social %}
+  {%- if s.icon %}
+  <a href="{{s.url}}" title="{{s.label or s.title}}" class="text-dark fs-3">
+    <i class="{{s.icon}}" aria-label="{{s.label or s.title}}"></i>
+  </a>
+  {%- endif %}
+{%- endfor %}
+</div>
+{% endif %}
+
+{# List all articles by this author #}
+{% set akey = key or page.fileSlug %}
+{% set archiveItems = collections.all | byFolder('content/blog') %}
+{% set hasAny = false %}
+<h2 class="custom-heading mt-5 mb-3">Articles by {{name or title}}</h2>
+<ul class="list-unstyled">
+{%- for p in archiveItems %}
+  {%- if p.data.author or p.data.authors -%}
+    {%- set authorField = p.data.author or p.data.authors -%}
+    {%- set keys = authorField | authorsToArray -%}
+    {%- if akey in keys -%}
+      {%- set hasAny = true -%}
+      <li class="mb-3">
+        <h3><a href="{{p.url}}" class="text-decoration-none fw-bold">{{p.data.title}}</a></h3>
+        {%- if p.data.date %}<small class="text-muted"><time datetime="{{p.date | htmlDateString}}">{{p.date | readableDate}}</time></small>{%- endif %}
+      </li>
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor %}
+</ul>
+{% if not hasAny %}
+  <p class="text-muted"><em>No articles found for this author yet.</em></p>
+{% endif %}
+</div>
+</div>
+{% include "partials/widget.njk" %}

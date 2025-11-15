@@ -35,4 +35,34 @@ export default function(eleventyConfig) {
 	eleventyConfig.addFilter("sortAlphabetically", strings =>
 		(strings || []).sort((b, a) => b.localeCompare(a))
 	);
+
+	eleventyConfig.addFilter("byFolder", (collection, folder) => {
+		return collection.filter(item => {
+			return item.inputPath && item.inputPath.startsWith(`./${folder}`);
+		});
+	});
+
+	eleventyConfig.addFilter("authorsToArray", (authors) => {
+		if (Array.isArray(authors)) {
+			return authors;
+		}
+		if (typeof authors === 'string') {
+			return [authors];
+		}
+		return [];
+	});
+
+	eleventyConfig.addFilter("authorsToLinks", (authorKeys, authorsCollection) => {
+		if (!authorKeys || authorKeys.length === 0) {
+			return [];
+		}
+		
+		return authorKeys.map(key => {
+			const authorPage = authorsCollection.find(a => a.data.key === key || a.page.fileSlug === key);
+			if (authorPage) {
+				return `<a href="${authorPage.url}">${authorPage.data.name || authorPage.data.title}</a>`;
+			}
+			return key;
+		});
+	});
 };

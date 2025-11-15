@@ -4,10 +4,20 @@ import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import yaml from "js-yaml";
 import pluginFilters from "./_config/filters.js";
+import fontAwesomePlugin from "@11ty/font-awesome";
 import markdownIt from "markdown-it";
 import markdownItAnchor from "markdown-it-anchor";
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
+	// Register Font Awesome plugin (was previously in a stray duplicate export)
+	eleventyConfig.addPlugin(fontAwesomePlugin, {
+		transform: 'i[class]',
+		shortcode: false,
+		failOnError: true,
+		defaultAttributes: {
+			class: 'icon-svg'
+		}
+	});
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
@@ -45,6 +55,12 @@ export default async function(eleventyConfig) {
 	  eleventyConfig.addFilter("featuredPosts", function(collection) {
     return collection.filter(post => post.data.tags && post.data.tags.includes('featured'));
 	 });
+	
+	// Create authors collection
+	eleventyConfig.addCollection("authors", function(collectionApi) {
+		return collectionApi.getFilteredByGlob("./content/authors/*.md");
+	});
+	
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);

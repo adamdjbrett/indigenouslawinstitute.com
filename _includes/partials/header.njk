@@ -9,12 +9,12 @@
                     {% endif %}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <small>Menu</small> <i class="fas fa-bars"></i>
+                    <small>Menu</small> <i class="fa-solid fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         {% for n in navbar.list %}<li class="nav-item"><a class="nav-link {% if n.url == page.url %} active{% endif %}" href="{{n.url}}">{{n.nav}}</a></li>{% endfor %}
-                        <li class="nav-item"><a class="nav-link custom-contact-link text-center" href="{{navbar.button.url}}">{{navbar.button.text}}</a></li>
+                        <li class="nav-item"><a class="nav-link custom-contact-link text-center" href="{{navbar.button.url}}">{{navbar.button.text}} <i class="fa-solid fa-podcast"></i></a></li>
                     </ul>
                 </div>
             </div>

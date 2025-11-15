@@ -11,7 +11,12 @@ layout: base.njk
 src="{{image}}"/></div>{% endif %}
 <div class="text-start col-md-8 mx-auto mt-5 mb-5 p-3">
 <p><small>
-Published on: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time> | Tags: {%- for tag in tags | filterTagList %}{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+Published on: <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>&nbsp;
+{%- if author -%}
+{%- set authorKeys = author | authorsToArray -%}
+{%- set authorLinks = authorKeys | authorsToLinks(collections.authors) -%}
+ | Published by: {{ authorLinks | join(", ") | safe }}
+{%- endif %} | Tags: {%- for tag in tags | filterTagList %}{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 <a class="me-2" href="{{ tagUrl }}"> {{ tag }} </a>
 {%- endfor %}
 </small></p>

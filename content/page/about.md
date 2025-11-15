@@ -15,7 +15,7 @@ permalink: /about/
 
 |     |     |
 | --- | --- |
-| ![Photo of Birgil and Steve](/img/ili_guys.jpg) | ![color photo of Birgil and Steve](/img/birgilsteve_sm.jpg) |
+| ![Photo of Birgil and Steve](/img/ili_guys.webp) | ![color photo of Birgil and Steve](/img/birgilsteve_sm.webp) |
 
   
 
