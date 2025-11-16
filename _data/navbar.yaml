@@ -21,6 +21,8 @@ list:
     url: /blog/
   - nav: Projects
     url: /projects/
+  - nav: Search
+    url: /search/
   - nav: Support
     url: https://originalfreenations.com/support-our-work/
 

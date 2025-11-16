@@ -4,7 +4,7 @@
             <div class="container">
                 <a class="navbar-brand fw-bold" href="{{metadata.url}}" title="{{metadata.title}}">
                     {% if navbar.icon.show %}
-                    <img class="img-fluid {% if navbar.icon.circle %}rounded-circle{% endif %}" width="{{navbar.icon.width}}" height="{{navbar.icon.height}}" alt="{{metadata.title}}" src="{{navbar.icon.image}}"/> <span class="text-logo ms-2">{{navbar.title}}</span>
+                    <img class="img-fluid {% if navbar.icon.circle %}rounded-circle{% endif %}" width="{{navbar.icon.width}}" height="{{navbar.icon.height}}" alt="{{metadata.title}} logo" src="{{navbar.icon.image}}"/> <span class="text-logo ms-2">{{navbar.title}}</span>
                     {% else %}<span class="text-logo">{{navbar.title}}</span>
                     {% endif %}
                 </a>
