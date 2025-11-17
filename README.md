@@ -1,21 +1,10 @@
 # CHANGELOG
-1. show name in header next logo. show name in blue ```#171b39``` - DONE
-2. set filter to disable find us in the contact widget - DONE
-3. set filter to disable contact form on homepage - DONE
-3. set filter to disable Why Chose Us - DONE
-3. enable ```image_credit:``` front matter and have it show under the images left aligned in plain text. - DONE
-4. Enable Eleventy Heading Anchors and linking to anchors (Get TOC working on long posts) like [/ili-report](/ili-report) and [ili-info](/ili_info/) - DONE `show_toc: true`
-5. Enable Eleventy Footnotes - DONE
-5. fix nesting of heading tags on homepage - DONE
-11. add schemea.njk to be filled in - 
-What is this for and where is it placed? Because the schema takes data from the frontmatter yaml / json and markdown.
+1. add schemea.njk to be filled in - 
 
-## Optional
-12. is search possible? like a /search/ page  - DONE
-~~12. fix notices on npm run~~
-~~6. enable authors. Individually authored posts only.~~
  
-
+# Deploying to FTP
+1. In dev mode (npm run start): Title shows "DEV - Indigenous Law Institute"
+2. In production mode (npm run build): Title shows "Indigenous Law Institute"
 
 ***
 

@@ -12,8 +12,15 @@ import markdownItAttrs from 'markdown-it-attrs';
 import markdownItTableOfContents from "markdown-it-table-of-contents";
 import pluginTOC from 'eleventy-plugin-toc';
 import pluginFilters from "./_config/filters.js";
+import production from "./_data/production.js";
+
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
+	// Example: Use production flag in config
+	// if (production) {
+	//   eleventyConfig.ignores.add("./content/drafts/*.md");
+	// }
+	
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
@@ -145,6 +152,65 @@ export default async function (eleventyConfig) {
 	});
 
 	eleventyConfig.addPlugin(pluginFilters);
+
+	// Production-only HTML minification transform
+	if (production) {
+		const { minify } = await import("html-minifier-terser");
+		eleventyConfig.addTransform("htmlmin", async (content, outputPath) => {
+			if (outputPath && outputPath.endsWith(".html")) {
+				try {
+					return await minify(content, {
+						collapseWhitespace: true,
+						removeComments: true,
+						removeRedundantAttributes: true,
+						useShortDoctype: true,
+						removeEmptyAttributes: true,
+						minifyCSS: true,
+						minifyJS: true,
+					});
+				} catch (e) {
+					console.warn("HTML minification failed for", outputPath, e.message);
+					return content;
+				}
+			}
+			return content;
+		});
+	}
+
+	// After build: compress HTML and CSS assets with gzip and brotli (production only)
+	if (production) {
+		eleventyConfig.on("eleventy.after", async () => {
+			const fs = await import("fs");
+			const path = await import("path");
+			const zlib = await import("zlib");
+			const root = path.default.join(process.cwd(), "_site");
+			/** Recursively walk output directory */
+			function walk(dir) {
+				return fs.default.readdirSync(dir, { withFileTypes: true }).flatMap(entry => {
+					const res = path.default.join(dir, entry.name);
+					if (entry.isDirectory()) return walk(res);
+					return [res];
+				});
+			}
+			const files = walk(root).filter(f => /\.(html|css)$/.test(f));
+			for (const file of files) {
+				try {
+					const content = fs.default.readFileSync(file);
+					// gzip
+					const gz = zlib.default.gzipSync(content, { level: 9 });
+					fs.default.writeFileSync(file + ".gz", gz);
+					// brotli
+					const br = zlib.default.brotliCompressSync(content, {
+						params: { [zlib.default.constants.BROTLI_PARAM_QUALITY]: 11 }
+					});
+					fs.default.writeFileSync(file + ".br", br);
+				} catch (e) {
+					console.warn("Compression failed for", file, e.message);
+				}
+			}
+			console.log(`Compressed ${files.length} HTML/CSS assets (gzip & brotli).`);
+		});
+	}
 
 	eleventyConfig.addPlugin(IdAttributePlugin, {});
 
