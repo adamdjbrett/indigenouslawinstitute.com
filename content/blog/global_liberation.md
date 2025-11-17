@@ -8,6 +8,8 @@ show_post_list: false
 show_info: true
 show_contact_form: false
 permalink: /global_liberation/
+redirect_from:
+  - /global_liberation.html
 tags:
   - liberation
   - info

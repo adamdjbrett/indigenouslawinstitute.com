@@ -8,6 +8,8 @@ show_post_list: false
 show_info: true
 show_contact_form: true
 permalink: /constitution/
+redirect_from:
+  - /constitution.html
 author: steven-newcomb
 tags: 
   - info

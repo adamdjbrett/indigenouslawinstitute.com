@@ -9,6 +9,9 @@ show_post_list: false
 show_info: false
 show_contact_form: false
 permalink: /ili-report/
+redirect_from:
+  - /ili-report.html
+  - /ili_report.html
 author: steven-newcomb
 tags:
  - info

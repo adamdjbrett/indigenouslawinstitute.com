@@ -9,6 +9,8 @@ show_post_list: false
 show_info: false
 show_contact_form: false
 permalink: /rice/
+redirect_from:
+  - /rice.html
 author: steven-newcomb
 tags:
   - law

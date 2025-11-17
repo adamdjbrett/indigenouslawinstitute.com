@@ -8,6 +8,8 @@ show_post_list: false
 show_info: true
 show_contact_form: true
 permalink: /dovision/
+redirect_from:
+  - /dovision.html
 tags:
   - catholic
   - christianity

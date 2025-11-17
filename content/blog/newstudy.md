@@ -9,6 +9,8 @@ show_post_list: false
 show_info: false
 show_contact_form: false
 permalink: /newstudy/
+redirect_from:
+  - /newstudy.html
 author: fred-whitehead
 tags:
   - catholic

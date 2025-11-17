@@ -6,6 +6,9 @@ show_post_list: false
 show_info: false
 show_contact_form: false
 permalink: /about/
+redirect_from: 
+  - /about-us/
+  - /about.html
 ---
 ## Indigenous Law Institute
 
@@ -33,12 +36,12 @@ Monsignor Dr. Kuriakose Bharanikulangara (Vatican representative) and Steve Newc
 - - -
 
 ## Indigenous Law Institute Information
-- [Introduction](/ili_info/) 
-- [Mission Statement](/ili_info/) 
-- [Foundational Summary](/ili_info/)
-- [Traditional Native Law](/ili_info/)
-- [The Empire-Domination Model](/ili_info/)
-- [Historical Unresolved Grief Seminars](/ili_info/)
+-   [Introduction](/ili_info/#introduction)
+-   [Mission Statement](/ili_info/#mission-statement)
+-   [Foundational Summary](/ili_info/#foundational-summary)
+-   [Traditional Native Law](/ili_info/#traditional-native-law)
+-   [The Empire-Domination Model](/ili_info/#the-empire-domination-model)
+-   [Historical Unresolved Grief Seminars](/ili_info/#historical-unresolved-grief-seminars)
 
 
 

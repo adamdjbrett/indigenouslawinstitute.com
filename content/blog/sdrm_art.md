@@ -9,6 +9,10 @@ show_post_list: false
 show_info: false
 show_contact_form: false
 permalink: /sdrm_art/
+redirect_from:
+  - /sdrm.html
+  - /sdrm_art.html
+  - /sdrm-art.html
 author: steven-newcomb
 tags:
   - catholic
