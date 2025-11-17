@@ -6,6 +6,9 @@ title: Indigenous Law Institute
 description: A Movement Toward Restoration and Healing
 
 # Hero
+
+# Enable plugin SEO block verification on this page
+use_plugin_seo: true
 hero: 
  title: Indigenous Law Institute
  description: "A Movement Toward Restoration and Healing"

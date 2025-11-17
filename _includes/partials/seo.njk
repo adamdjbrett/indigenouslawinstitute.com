@@ -37,17 +37,17 @@
 	content="{{ metadata.metasocial.twitteruser }}"
 	property="twitter:author"
 />
+{# Optional: output plugin-seo block for verification on selected pages #}
+{%- if use_plugin_seo -%}
+<!-- plugin-seo: begin -->
+{% seo "" %}
+<!-- plugin-seo: end -->
+{%- endif -%}
 <meta property="dc:creator" content="{{ metadata.author.name }}" />
 <meta content="{{ metadata.metasocial.twitter }}" name="twitter:site" />
 <meta property="og:type" content="website" />
 <meta content="index, follow" name="robots">
 <link rel="canonical" href="{{ metadata.url }}{{ page.url }}" />
-<link
-	rel="alternate"
-	href="feed/feed.xml"
-	type="application/atom+xml"
-	title="{{ metadata.title }}"
-/>
 <meta name="language" content="{{ metadata.language }}" />
 <meta name="locale" content="{{ metadata.locale }}" />
 <meta property="og:locale" content="{{ metadata.locale }}" />

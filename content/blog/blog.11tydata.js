@@ -3,4 +3,5 @@ export default {
 		"posts"
 	],
 	"layout": "post.njk",
+	use_plugin_seo: true,
 };

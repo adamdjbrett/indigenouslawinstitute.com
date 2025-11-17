@@ -13,6 +13,7 @@ import markdownItTableOfContents from "markdown-it-table-of-contents";
 import pluginTOC from 'eleventy-plugin-toc';
 import pluginFilters from "./_config/filters.js";
 import production from "./_data/production.js";
+import pluginSEO from "eleventy-plugin-seo";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
@@ -68,6 +69,40 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+
+	// Configure eleventy-plugin-seo (ESM)
+	try {
+		const fs = await import("fs");
+		const path = await import("path");
+		const metaPath = path.default.join(process.cwd(), "_data", "metadata.yaml");
+		let siteMeta = {};
+		try {
+			const raw = fs.default.readFileSync(metaPath, "utf8");
+			siteMeta = yaml.load(raw) || {};
+		} catch (e) {
+			// If metadata.yaml can't be read, fall back to empty object
+			siteMeta = {};
+		}
+		// Normalize URL in case of stray quotes in YAML
+		const siteUrl = (siteMeta.url ? String(siteMeta.url) : "").replace(/^"|"$/g, "");
+		const twitterUser = Array.isArray(siteMeta.metasocial)
+			? (siteMeta.metasocial.find(m => Object.prototype.hasOwnProperty.call(m, "twitteruser")) || {}).twitteruser
+			: undefined;
+
+		eleventyConfig.addPlugin(pluginSEO, {
+			title: siteMeta.title,
+			description: siteMeta.description,
+			url: siteUrl || "",
+			image: siteMeta.image,
+			author: siteMeta.author?.name,
+			options: {
+				twitter: twitterUser,
+				imageWithBaseUrl: true
+			}
+		});
+	} catch (e) {
+		console.warn("SEO plugin configuration skipped:", e?.message || e);
+	}
 	const md = new markdownIt({
 		html: true,
 		breaks: true,

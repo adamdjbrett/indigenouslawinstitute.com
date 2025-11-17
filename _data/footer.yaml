@@ -50,6 +50,8 @@ menu3:
     url: https://nativeweb.org
   - nav: Original Free Nations
     url: https://originalfreenations.com/  
+  - nav: Domination Code Film
+    url: https://vimeo.com/ondemand/dominationcode  
 
 # Footer Social area
 social: 
@@ -65,6 +67,9 @@ social:
  - icon: fab fa-facebook
    title: Follow Our Facebook
    url: https://www.facebook.com/stevennewcomb1  
+ - icon: fab fa-vimeo
+   title: Watch Our Films
+   url: https://vimeo.com/ondemand/dominationcode  
 
 
 
