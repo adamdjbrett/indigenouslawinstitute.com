@@ -172,6 +172,44 @@ To test the production flag:
 4. **Simple** - Easy to understand and maintain
 5. **Built-in** - Uses Eleventy's native environment variables
 
+## 7. Asset Optimization (Production Only)
+
+The production build automatically optimizes assets for maximum performance:
+
+### CSS & JavaScript Inlining
+- External CSS files are inlined into `<style>` tags
+- External JavaScript files are inlined into `<script>` tags  
+- **Reduces HTTP requests** by eliminating separate file downloads
+- CSS is minified during inlining using CleanCSS (level 2)
+- External URLs (CDNs) are preserved and **not** inlined
+- Only local files in `_site` directory are inlined
+
+### HTML Minification
+- Collapses whitespace
+- Removes comments
+- Minifies inline CSS and JavaScript
+- Removes redundant attributes
+- Uses short doctype
+
+### Compression
+After building, all HTML and CSS files are compressed using:
+- **Gzip** (level 9) - Creates `.gz` files
+- **Brotli** (quality 11) - Creates `.br` files
+
+Your web server can automatically serve these compressed versions when supported by the browser.
+
+### Size Comparison
+Example from actual build:
+- **Original** (with inlined assets): `index.html` (107 KB)
+- **Gzipped**: `index.html.gz` (30 KB) - 72% reduction
+- **Brotli**: `index.html.br` (27 KB) - 75% reduction
+
+### Benefits
+- ✅ **Fewer HTTP requests**: All critical CSS/JS is inlined in the HTML
+- ✅ **Faster initial load**: No render-blocking external stylesheets
+- ✅ **Optimized delivery**: Compressed files served by modern web servers
+- ✅ **Development friendly**: Inlining only happens in production builds
+
 ## Credits
 
 This implementation is based on the tutorial by Rob O'Leary:

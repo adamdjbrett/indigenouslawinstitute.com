@@ -188,13 +188,61 @@ export default async function (eleventyConfig) {
 
 	eleventyConfig.addPlugin(pluginFilters);
 
-	// Production-only HTML minification transform
+	// Production-only: Inline CSS and JS, then minify HTML
 	if (production) {
+		const fs = await import("fs");
+		const path = await import("path");
 		const { minify } = await import("html-minifier-terser");
-		eleventyConfig.addTransform("htmlmin", async (content, outputPath) => {
+		const CleanCSS = (await import("clean-css")).default;
+
+		eleventyConfig.addTransform("inline-and-minify", async (content, outputPath) => {
 			if (outputPath && outputPath.endsWith(".html")) {
 				try {
-					return await minify(content, {
+					let html = content;
+
+					// Inline external CSS files
+					html = html.replace(/<link\s+rel="stylesheet"\s+href="([^"]+)"\s*\/?>/gi, (match, href) => {
+						// Skip external URLs
+						if (href.startsWith("http://") || href.startsWith("https://") || href.startsWith("//")) {
+							return match;
+						}
+						try {
+							const cssPath = path.default.join(process.cwd(), "_site", href);
+							if (fs.default.existsSync(cssPath)) {
+								let css = fs.default.readFileSync(cssPath, "utf8");
+								// Minify CSS
+								const minified = new CleanCSS({ level: 2 }).minify(css);
+								if (!minified.errors || minified.errors.length === 0) {
+									css = minified.styles;
+								}
+								return `<style>${css}</style>`;
+							}
+						} catch (e) {
+							console.warn(`Failed to inline CSS: ${href}`, e.message);
+						}
+						return match;
+					});
+
+					// Inline external JS files
+					html = html.replace(/<script\s+src="([^"]+)"\s*><\/script>/gi, (match, src) => {
+						// Skip external URLs and module scripts
+						if (src.startsWith("http://") || src.startsWith("https://") || src.startsWith("//")) {
+							return match;
+						}
+						try {
+							const jsPath = path.default.join(process.cwd(), "_site", src);
+							if (fs.default.existsSync(jsPath)) {
+								const js = fs.default.readFileSync(jsPath, "utf8");
+								return `<script>${js}</script>`;
+							}
+						} catch (e) {
+							console.warn(`Failed to inline JS: ${src}`, e.message);
+						}
+						return match;
+					});
+
+					// Minify the final HTML (with inlined CSS/JS already minified)
+					return await minify(html, {
 						collapseWhitespace: true,
 						removeComments: true,
 						removeRedundantAttributes: true,
@@ -204,7 +252,7 @@ export default async function (eleventyConfig) {
 						minifyJS: true,
 					});
 				} catch (e) {
-					console.warn("HTML minification failed for", outputPath, e.message);
+					console.warn("Inline/minify transform failed for", outputPath, e.message);
 					return content;
 				}
 			}
