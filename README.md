@@ -1,14 +1,22 @@
-# CHANGELOG
-1. add schemea.njk to be filled in - 
+# indigenouslawinstitute.com
+[![Deploy Eleventy to XMIT](https://github.com/adamdjbrett/indigenouslawinstitute.com/actions/workflows/xmit-deploy.yml/badge.svg)](https://github.com/adamdjbrett/indigenouslawinstitute.com/actions/workflows/xmit-deploy.yml)
+
+[![xmit logo](/xmit.co.png)](https://xmit.co)
+  
+Hosted on [xmit.co](https://xmit.co)
+
+
+## Changelog
+1. add schemea.njk to be filled
 
  
-# Deploying to FTP
+## Deploying to XMIT
 1. In dev mode (npm run start): Title shows "DEV - Indigenous Law Institute"
 2. In production mode (npm run build): Title shows "Indigenous Law Institute"
 
 ***
 
-# ili.nativeweb.org
+## Details
 
 A Project developed by [Adam DJ Brett](https://adamdjbrett.com)
 
