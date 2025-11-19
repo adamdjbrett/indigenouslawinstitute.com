@@ -176,10 +176,10 @@ export default async function (eleventyConfig) {
 		metadata: {
 			language: "en",
 			title:
-				"Editorial",
+				"Indigenous Law Institute (ILI)",
 			subtitle:
-				"Editorial 11ty.",
-			base: "https://www.example.com/",
+				"A Movement Toward Restoration and Healing",
+			base: "https://indigenouslawinstitute.com/",
 			author: {
 				name: "adamdjbrett",
 			},
