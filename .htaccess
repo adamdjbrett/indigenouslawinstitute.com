@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Force canonical host (remove www)
+RewriteCond %{HTTP_HOST} ^www\.indigenouslawinstitute\.com$ [NC]
+RewriteRule ^(.*)$ https://indigenouslawinstitute.com/$1 [R=301,L]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Add trailing slash to all paths except files with extensions
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteCond %{REQUEST_URI} !\.[^./]+$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+# Remove multiple trailing slashes (normalize to single slash)
+RewriteCond %{REQUEST_URI} ^(.*)//+(.*)$
+RewriteRule ^(.*)$ %1/%2 [R=301,L]
