@@ -57,3 +57,62 @@
 <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
 <link rel="stylesheet" href="/css/index.css">
 <script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
+<!--JSON-LD Schema.org -->
+<script>
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "Indigenous Law Institute",
+  "url": "https://indigenouslawinstitute.com/",
+  "description": "The Indigenous Law Institute promotes understanding of Indigenous nations' inherent rights and challenges the legal and religious foundations of domination embedded in U.S. federal Indian law.",
+
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Birgil Kills Straight"
+    },
+    {
+      "@type": "Person",
+      "name": "Steven T. Newcomb",
+      "url": "http://stevennewcomb.com/"
+    }
+  ],
+
+  "member": {
+    "@type": "Person",
+    "name": "Peter d’Errico",
+    "url": "https://peterderrico.substack.com/"
+  },
+
+  "colleague": [
+    {
+      "@type": "Organization",
+      "name": "Indigenous Law Institute",
+      "url": "https://indigenouslawinstitute.com/"
+    },
+    {
+      "@type": "Organization",
+      "name": "Original Free Nations",
+      "url": "https://originalfreenations.com/"
+    },
+    {
+      "@type": "Organization",
+      "name": "Desecrating the Sacred",
+      "url": "https://desecratingthesacred.com/"
+    },
+    {
+      "@type": "Organization",
+      "name": "Domination Chronicles",
+      "url": "http://dominationchronicles.com/"
+    }
+  ],
+
+  "sameAs": [
+    "https://indigenouslawinstitute.com/",
+    "http://stevennewcomb.com/",
+    "https://originalfreenations.com/",
+    "http://dominationchronicles.com/"
+  ]
+}
+
+</script>
