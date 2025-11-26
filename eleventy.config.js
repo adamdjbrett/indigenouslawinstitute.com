@@ -52,6 +52,9 @@ export default async function (eleventyConfig) {
 		})
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
+	// Ensure xmit.toml is copied to output root for hosting configuration
+	eleventyConfig.addPassthroughCopy({ "./xmit.toml": "/xmit.toml" });
+
 	eleventyConfig.addWatchTarget("css/**/*.css");
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}");
 
