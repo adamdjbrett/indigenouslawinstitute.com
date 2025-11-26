@@ -46,30 +46,7 @@ jobs:
             exit 1
           fi
           ls -1 _site | head -n 20
-
-      - name: Compress assets (gzip + brotli)
-        run: |
-          node <<'EOF'
-          import { readdirSync, readFileSync, writeFileSync, statSync } from 'node:fs';
-          import { gzipSync, brotliCompressSync, constants } from 'node:zlib';
-          import { join } from 'node:path';
-          function compressFile(p){
-            const d = readFileSync(p);
-            writeFileSync(p+'.gz', gzipSync(d,{level:9}));
-            writeFileSync(p+'.br', brotliCompressSync(d,{params:{[constants.BROTLI_PARAM_QUALITY]:11}}));
-            console.log('✓', p);
-          }
-          function walk(dir){
-            for(const f of readdirSync(dir)){
-              const full = join(dir,f);
-              const st = statSync(full);
-              if(st.isDirectory()) walk(full); else if(/\.(html|css|js)$/i.test(f)) compressFile(full);
-            }
-          }
-          walk('_site');
-          EOF
-        shell: bash
-
+          
       - name: Deploy to XMIT (CLI)
         env:
           XMIT_KEY: ${{ secrets.XMIT_KEY }}
