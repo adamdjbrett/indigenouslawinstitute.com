@@ -24,7 +24,7 @@ tags:
 
 #### Prepared by Steven Newcomb
 
-Director, [Indigenous Law Institute](http://ili.nativeweb.org/)
+Director, [Indigenous Law Institute](https://indigenouslawinstitute.com/)
 (Eugene, Oregon)
 and
 Indigenous Law Research Coordinator, D-Q University at Sycuan
