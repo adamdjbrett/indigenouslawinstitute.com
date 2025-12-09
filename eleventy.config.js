@@ -44,6 +44,10 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addCollection("authors", function(collectionApi) {
 		return collectionApi.getFilteredByGlob("./content/authors/*.md");
 	});
+	// Collection limited to blog posts
+	eleventyConfig.addCollection("blogFeed", (collectionApi) => {
+		return collectionApi.getFilteredByGlob("./content/blog/*.md");
+	});
 	eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
 	eleventyConfig
 		.addPassthroughCopy({
@@ -174,7 +178,7 @@ export default async function (eleventyConfig) {
 			},
 		},
 		collection: {
-			name: "all",
+			name: "blogFeed",
 			limit: 20,
 		},
 		metadata: {
