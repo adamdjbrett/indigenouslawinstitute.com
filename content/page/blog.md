@@ -4,7 +4,7 @@ title: Blog
 description: Update from our blog
 pagination:
   data: collections.posts
-  size: 6
+  size: 9
   reverse: true
 testdata:
   - item1
