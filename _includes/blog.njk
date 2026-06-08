@@ -8,7 +8,7 @@ layout: base.njk
             <p>{{description}}</p>    
             </div>
                 <div class="row">
-                    {% for post in  pagination.items | reverse %}<div class="col-md-4 mb-4">
+                    {% for post in pagination.items %}<div class="col-md-4 mb-4">
                         <div class="card h-100 custom-card">
                             <img src="{{post.data.image or metadata.image}}" class="card-img-top custom-blog-img" alt="{{post.title}}" 
                             loading="lazy" width="100%" height="100%">

@@ -5,10 +5,11 @@
 {# Set description and image with fallbacks #}
 {%- set pageDescription = description or metadata.description -%}
 {%- set pageImage = image or metadata.image -%}
+{%- set pageCanonical = canonical_url or metadata.url + page.url -%}
 
 <title>{{pageTitle}}</title>
 <meta name="description" content="{{pageDescription}}" />
-<link rel="canonical" href="{{ metadata.url }}{{ page.url }}" />
+<link rel="canonical" href="{{ pageCanonical }}" />
 
 {# Open Graph / Facebook #}
 <meta property="og:type" content="website" />
