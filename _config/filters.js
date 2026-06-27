@@ -1,5 +1,19 @@
 import { DateTime } from "luxon";
 
+function toDateTime(dateObj) {
+	if (!dateObj) return null;
+	if (dateObj instanceof Date) return DateTime.fromJSDate(dateObj, { zone: "utc" });
+	return DateTime.fromISO(String(dateObj), { zone: "utc" });
+}
+
+// PHP-style format letters → Luxon tokens
+function phpToLuxon(format) {
+	return (format || 'yyyy-MM-dd')
+		.replace(/Y/g, 'yyyy')
+		.replace(/m/g, 'MM')
+		.replace(/d/g, 'dd');
+}
+
 export default function(eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
@@ -7,6 +21,13 @@ export default function(eleventyConfig) {
 
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
 		return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat('yyyy-LL-dd');
+	});
+
+	// Generic date filter used in seo.njk — accepts PHP-style format tokens (Y, m, d)
+	eleventyConfig.addFilter("date", (dateObj, format) => {
+		const dt = toDateTime(dateObj);
+		if (!dt || !dt.isValid) return '';
+		return dt.toFormat(phpToLuxon(format));
 	});
 	eleventyConfig.addNunjucksFilter("limit", (arr, limit) => arr.slice(0, limit));
 	eleventyConfig.addFilter("head", (array, n) => {
