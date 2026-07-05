@@ -1,0 +1,36 @@
+{%- set postData = post.data -%}
+{%- set postUrl = metadata.url + post.url -%}
+{%- set postTitle = postData.title or metadata.title -%}
+{%- set postDescription = postData.description or postData.summary or metadata.description -%}
+{%- set postImage = postData.image or metadata.image -%}
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": {{ (postUrl + "#metadata") | dump | safe }},
+  "name": {{ postTitle | dump | safe }},
+  "headline": {{ postTitle | dump | safe }},
+  "description": {{ postDescription | dump | safe }},
+  "url": {{ postUrl | dump | safe }},
+  "identifier": {{ postUrl | dump | safe }},
+  "inLanguage": {{ metadata.language | dump | safe }},
+  "datePublished": {{ post.date | htmlDateString | dump | safe }},
+  "dateModified": {{ (postData.updated or postData.modified or post.date) | htmlDateString | dump | safe }},
+  "author": {
+    "@type": "Organization",
+    "name": "Indigenous Law Institute",
+    "url": {{ metadata.url | dump | safe }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Indigenous Law Institute",
+    "url": {{ metadata.url | dump | safe }}
+  },
+  "isPartOf": {
+    "@type": "Blog",
+    "@id": {{ (metadata.url + "/#blog") | dump | safe }},
+    "name": {{ metadata.title | dump | safe }},
+    "url": {{ metadata.url | dump | safe }}
+  }{% if postImage %},
+  "image": {{ ((metadata.url + postImage) if "/" == postImage[0] else postImage) | dump | safe }}{% endif %}{% if postData.citations %},
+  "citation": {{ postData.citations | dump | safe }}{% endif %}
+}
