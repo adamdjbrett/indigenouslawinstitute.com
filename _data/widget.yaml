@@ -1,7 +1,7 @@
 # Blog List Widget
 blog: 
-  title: Lastest Post
-  description: Update form our blog post
+  title: Latest Posts
+  description: Essays, columns, and Domination Chronicles episodes from the Indigenous Law Institute
   button: 
     text: Explore all
     url: /blog/
@@ -12,43 +12,42 @@ table_of_content: Table of Contents
 
 # Info List Widget
 info: 
-  title: Why Chose Us
-  description: Becasue we are profesional for your projects
+  title: Our Work
+  description: The Indigenous Law Institute assists American Indian and other Indigenous communities to work toward a future of restoration and healing.
   list: 
-    - icon: fab fa-eleventy
-      title: Eleventy
-      text: lorep ipsum dolor siamet amet jabang bayi lanang wedok temenan iki saestu yakinlah sumpah
-    - icon: fab fa-bootstrap
-      title: Bootstrap
-      text: lorep ipsum dolor siamet amet jabang bayi lanang wedok temenan iki saestu yakinlah sumpah
-    - icon: fab fa-cloudflare
-      title: Cloudflare
-      text: lorep ipsum dolor siamet amet jabang bayi lanang wedok temenan iki saestu yakinlah sumpah
+    - icon: fas fa-scroll
+      title: Traditional Native Law
+      text: The natural world wisdom of our ancestors still lives in the Kanaka Maoli Law, the Seven Laws of the Lakota, the Twelve Laws of the Shawnee, and the Laws of the Kogi. We advocate that traditional Native thought and culture be acknowledged as a necessary basis for our collective existence on Mother Earth. [Read more](/ili_info/#traditional-native-law)
+    - icon: fas fa-scale-balanced
+      title: The Empire-Domination Model
+      text: We have identified U.S. federal Indian law as a language system of domination, traced from the 1493 papal bull *Inter Caetera* to the Supreme Court ruling in *Johnson v. M&rsquo;Intosh*, and we are developing a radically new basis for thinking about Native rights. [Read more](/ili_info/#the-empire-domination-model)
+    - icon: fas fa-seedling
+      title: Restoration and Healing
+      text: Through Historical Unresolved Grief Seminars and the active retrieval of our languages, cultures, and traditions, our communities are assisted to work through generations of trauma and to recover a sovereign spiritual way of life. [Read more](/ili_info/#historical-unresolved-grief-seminars)
 
 # Contact Form Widget
 contact: 
-  formspree_id: "myzlelkg"
+  formspree_id: "https://formspree.io/f/myzlelkg"
   title: Contact Us
   form: 
     title: Contact Form
-    button: Sent Message
+    button: Send Message
   show_map: false
   map_title: Find Us
   map_image: 
     show: false
     image: "https://placehold.co/600x400"
-    url: "https://maps.app.goo.gl/7bNNqeQfa6X4RjtbA"
-    alt: "My locations"
+    url: ""
+    alt: ""
   text: |
-     you can visit on sesame street 76 , USA.
+     Reach the Indigenous Law Institute by writing to Steven T. Newcomb, or follow the work through the Domination Chronicles podcast.
   list: 
-    - icon: fas fa-map
-      text: Sesame Street 76 , USA
-      url: /
-    - icon: fas fa-phone
-      text: "(1) 234 5678"
-      url: "tel:+12345678"
     - icon: fas fa-envelope
-      text: info@domain.com
-      url: "mailto:info@domain.com"
-
+      text: info@originalfreenations.com
+      url: "mailto:info@originalfreenations.com"
+    - icon: fas fa-podcast
+      text: Domination Chronicles Podcast
+      url: "https://DominationChronicles.com"
+    - icon: fas fa-hand-holding-heart
+      text: Support our work
+      url: "https://originalfreenations.com/support-our-work/"
