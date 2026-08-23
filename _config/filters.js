@@ -15,6 +15,8 @@ function phpToLuxon(format) {
 }
 
 export default function(eleventyConfig) {
+	const slugify = eleventyConfig.getFilter("slugify");
+
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
 	});
@@ -68,7 +70,7 @@ export default function(eleventyConfig) {
 			return authors;
 		}
 		if (typeof authors === 'string') {
-			return [authors];
+			return authors.split(/\s+and\s+/i).map(author => slugify(author));
 		}
 		return [];
 	});

@@ -1,6 +1,7 @@
 ---
 title: Toward an Oglala Lakota Constitution
 description: "Toward an Oglala Lakota Constitution Statement of Basic Principles"
+author: "Birgil Kills Straight and Steven Newcomb"
 date: 2004-06-01
 image: 
 show_toc: true
@@ -10,7 +11,6 @@ show_contact_form: true
 permalink: /constitution/
 redirect_from:
   - /constitution.html
-author: steven-newcomb
 tags: 
   - info
 ---
