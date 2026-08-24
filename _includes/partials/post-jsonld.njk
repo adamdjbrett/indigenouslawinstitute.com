@@ -1,5 +1,5 @@
 {%- set postData = post.data -%}
-{%- set postUrl = metadata.url + post.url -%}
+{%- set postUrl = postData.canonical_url or metadata.url + post.url -%}
 {%- set postTitle = postData.title or metadata.title -%}
 {%- set postDescription = postData.description or postData.summary or metadata.description -%}
 {%- set postImage = postData.image or metadata.image -%}
@@ -15,11 +15,13 @@
   "inLanguage": {{ metadata.language | dump | safe }},
   "datePublished": {{ post.date | htmlDateString | dump | safe }},
   "dateModified": {{ (postData.updated or postData.modified or post.date) | htmlDateString | dump | safe }},
-  "author": {
+  {%- set postAuthorKeys = postData.author | authorsToArray -%}
+  {%- set postAuthors = postAuthorKeys | authorsToPeople(collections.authors, metadata.url) -%}
+  "author": {% if postAuthors.length %}{{ postAuthors | dump | safe }}{% else %}{
     "@type": "Organization",
     "name": "Indigenous Law Institute",
     "url": {{ metadata.url | dump | safe }}
-  },
+  }{% endif %},
   "publisher": {
     "@type": "Organization",
     "name": "Indigenous Law Institute",

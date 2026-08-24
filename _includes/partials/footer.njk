@@ -2,14 +2,14 @@
     <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 mb-4 p-3">
+                <div class="col-md-5 mb-4 p-3 h-card">
                     {% if footer.image %}
-                        <img class="img-fluid mb-3 {% if footer.circle %}rounded-circle{% endif %}" alt="{{metadata.title}}" 
+                        <img class="img-fluid mb-3 u-photo {% if footer.circle %}rounded-circle{% endif %}" alt="{{metadata.title}}"
                         width="{{footer.width}}" height="{{footer.height}}" 
                         src="{{footer.image}}" loading="lazy"/>
                     {% endif %}
-                    <h3 class="fw-bold mb-3 custom-footer-title"><strong><a href="{{page.url}}" class="none">{{footer.title}}</a></strong></h3>
-                    <p class="custom-text-sm text-secondary">
+                    <h3 class="fw-bold mb-3 custom-footer-title"><strong><a href="{{metadata.url}}" class="none p-name u-url">{{footer.title}}</a></strong></h3>
+                    <p class="custom-text-sm text-secondary p-note">
                         {{footer.text|md|safe}}
                     </p>
                     <div class="mt-3">

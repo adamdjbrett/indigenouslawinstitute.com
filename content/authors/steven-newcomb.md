@@ -2,6 +2,11 @@
 name: Steven T. Newcomb
 organization: Indigenous Law Institute
 bio: "Steven Newcomb is a Shawnee-Lenape scholar and author. He has been studying and writing about U.S. federal Indian law and policy since the early 1980s, particularly the application of international law to Indigenous nations and peoples. Mr. Newcomb is the Director of the Indigenous Law Institute, which he co-founded with Birgil Kills Straight, a Traditional Headman and Elder of the Oglala Lakota Nation. Together they have carried on a global campaign challenging imperial Vatican documents from the fifteenth century. Those documents resulted in the decimation of Original Nations and Peoples of Mother Earth and thereby deprived the planet of life-ways, sustainable ecosystems, and Sacred Teachings. Newcomb’s book Pagans in the Promised Land: Decoding the Doctrine of Christian Discovery (2008) relies upon recent findings in cognitive theory and a semantic analysis of the Latin and English versions of 15th century Vatican documents. "
+sameAs:
+  - https://isni.org/isni/000000003627109X
+  - https://stevennewcomb.com
+  - https://originalfreenations.com
+  - https://stevennewcomb.substack.com/
 social: 
   - title: "Website"
     url: https://originalfreenations.com

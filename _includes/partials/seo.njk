@@ -58,81 +58,68 @@
 <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
 <link rel="stylesheet" href="/css/index.css">
 <script type="module">{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}</script>
-<!--JSON-LD Schema.org -->
-<script>
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Indigenous Law Institute",
-  "url": "https://indigenouslawinstitute.com/",
-  "description": "The Indigenous Law Institute promotes understanding of Indigenous nations' inherent rights and challenges the legal and religious foundations of domination embedded in U.S. federal Indian law.",
-
-  "founder": [
+  "@graph": [
     {
+      "@type": "WebSite",
+      "@id": {{ (metadata.url + "/#website") | dump | safe }},
+      "name": {{ metadata.title | dump | safe }},
+      "description": {{ metadata.description | dump | safe }},
+      "url": {{ (metadata.url + "/") | dump | safe }},
+      "inLanguage": {{ metadata.language | dump | safe }},
+      "publisher": { "@id": {{ (metadata.url + "/#organization") | dump | safe }} }
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": {{ (metadata.url + "/#organization") | dump | safe }},
+      "name": {{ metadata.title | dump | safe }},
+      "description": {{ metadata.description | dump | safe }},
+      "url": {{ (metadata.url + "/") | dump | safe }},
+      "founder": [
+        { "@id": {{ (metadata.url + "/authors/birgil-kills-straight/#person") | dump | safe }} },
+        { "@id": {{ (metadata.url + "/authors/steven-newcomb/#person") | dump | safe }} }
+      ]
+    },
+    {% for authorPage in collections.authors %}{
       "@type": "Person",
-      "name": "Birgil Kills Straight"
-    },
-    {
-      "@type": "Person",
-      "name": "Steven T. Newcomb",
-      "url": "http://stevennewcomb.com/"
-    }
-  ],
-
-  "member": {
-    "@type": "Person",
-    "name": "Peter d’Errico",
-    "url": "https://peterderrico.substack.com/"
-  },
-
-  "colleague": [
-    {
-      "@type": "Organization",
-      "name": "Indigenous Law Institute",
-      "url": "https://indigenouslawinstitute.com/"
-    },
-    {
-      "@type": "Organization",
-      "name": "Original Free Nations",
-      "url": "https://originalfreenations.com/"
-    },
-    {
-      "@type": "Organization",
-      "name": "Desecrating the Sacred",
-      "url": "https://desecratingthesacred.com/"
-    },
-    {
-      "@type": "Organization",
-      "name": "Domination Chronicles",
-      "url": "http://dominationchronicles.com/"
-    }
-  ],
-
-  "sameAs": [
-    "https://indigenouslawinstitute.com/",
-    "http://stevennewcomb.com/",
-    "https://originalfreenations.com/",
-    "http://dominationchronicles.com/"
+      "@id": {{ (metadata.url + authorPage.url + "#person") | dump | safe }},
+      "name": {{ authorPage.data.name | dump | safe }},
+      "url": {{ (metadata.url + authorPage.url) | dump | safe }},
+      "description": {{ authorPage.data.bio | dump | safe }}{% if authorPage.data.organization %},
+      "affiliation": { "@type": "Organization", "name": {{ authorPage.data.organization | dump | safe }} }{% endif %}{% if authorPage.data.birthDate %},
+      "birthDate": {{ authorPage.data.birthDate | dump | safe }}{% endif %}{% if authorPage.data.deathDate %},
+      "deathDate": {{ authorPage.data.deathDate | dump | safe }}{% endif %}{% if authorPage.data.sameAs %},
+      "sameAs": {{ authorPage.data.sameAs | dump | safe }}{% endif %}
+    }{% if not loop.last %},{% endif %}{% endfor %}
   ]
 }
-
 </script>
 
 {# Zotero / Highwire / PRISM — makes posts harvestable as Blog Post type #}
 {% set isPost = layout == 'post' or "posts" in (tags or []) %}
 {% if isPost %}
+{% set authorKeys = author | authorsToArray %}
+{% set authorNames = authorKeys | authorsToNames(collections.authors) %}
 <link rel="cite-as" href="{{ pageCanonical }}">
 <link rel="type" href="https://schema.org/BlogPosting">
-<link rel="author" href="{{ metadata.url }}">
+{% if authorKeys.length %}{% for authorPage in collections.authors %}{% if authorPage.page.fileSlug in authorKeys %}<link rel="author" href="{{ metadata.url }}{{ authorPage.url }}">
+{% endif %}{% endfor %}{% else %}<link rel="author" href="{{ metadata.url }}">
+{% endif %}
 <link rel="describedby" type="application/ld+json" profile="https://schema.org/" href="{{ page.url }}metadata.json">
 <meta property="zotero:itemType" content="blogPost" />
 <meta property="dc:title" content="{{ pageTitle | escape }}" />
-<meta property="dc:creator" content="Indigenous Law Institute" />
+{% for authorName in authorNames %}<meta property="dc:creator" content="{{ authorName | escape }}" />
+{% else %}<meta property="dc:creator" content="Indigenous Law Institute" />
+{% endfor %}
 {% if date %}<meta property="dc:date" content="{{ date | date('Y-m-d') }}" />{% endif %}
 <meta property="dc:language" content="{{ metadata.language }}" />
 <meta property="dc:identifier" content="{{ pageCanonical }}" />
 <meta name="citation_title" content="{{ pageTitle | escape }}" />
-<meta name="citation_author" content="Indigenous Law Institute" />
+{% for authorName in authorNames %}<meta name="citation_author" content="{{ authorName | escape }}" />
+{% else %}<meta name="citation_author" content="Indigenous Law Institute" />
+{% endfor %}
 {% if date %}<meta name="citation_publication_date" content="{{ date | date('Y-m-d') }}" />{% endif %}
 <meta name="citation_fulltext_html_url" content="{{ pageCanonical }}" />
 <meta name="citation_public_url" content="{{ pageCanonical }}" />

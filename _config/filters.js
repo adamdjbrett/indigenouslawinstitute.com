@@ -83,9 +83,29 @@ export default function(eleventyConfig) {
 		return authorKeys.map(key => {
 			const authorPage = authorsCollection.find(a => a.data.key === key || a.page.fileSlug === key);
 			if (authorPage) {
-				return `<a href="${authorPage.url}">${authorPage.data.name || authorPage.data.title}</a>`;
+				return `<a class="p-author h-card u-url" href="${authorPage.url}"><span class="p-name">${authorPage.data.name || authorPage.data.title}</span></a>`;
 			}
 			return key;
 		});
 	});
+
+	eleventyConfig.addFilter("authorsToNames", (authorKeys, authorsCollection) =>
+		authorKeys.map(key => {
+			const authorPage = authorsCollection.find(a => a.data.key === key || a.page.fileSlug === key);
+			return authorPage?.data.name || key;
+		})
+	);
+
+	eleventyConfig.addFilter("authorsToPeople", (authorKeys, authorsCollection, siteUrl) =>
+		authorKeys.map(key => {
+			const authorPage = authorsCollection.find(a => a.data.key === key || a.page.fileSlug === key);
+			return authorPage ? {
+				"@type": "Person",
+				"@id": `${siteUrl}${authorPage.url}#person`,
+				name: authorPage.data.name,
+				url: `${siteUrl}${authorPage.url}`,
+				sameAs: authorPage.data.sameAs,
+			} : { "@type": "Person", name: key };
+		})
+	);
 };
