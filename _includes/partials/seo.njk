@@ -97,18 +97,23 @@
 }
 </script>
 
-{# Zotero / Highwire / PRISM — makes posts harvestable as Blog Post type #}
+{# Zotero / Highwire / PRISM — makes posts harvestable by content type #}
 {% set isPost = layout == 'post' or "posts" in (tags or []) %}
+{% set isPodcast = 'podcast' in (tags or []) %}
 {% if isPost %}
 {% set authorKeys = author | authorsToArray %}
 {% set authorNames = authorKeys | authorsToNames(collections.authors) %}
 <link rel="cite-as" href="{{ pageCanonical }}">
-<link rel="type" href="https://schema.org/BlogPosting">
+{% if isPodcast %}<link rel="type" href="https://schema.org/PodcastEpisode">
+{% else %}<link rel="type" href="https://schema.org/BlogPosting">
+{% endif %}
 {% if authorKeys.length %}{% for authorPage in collections.authors %}{% if authorPage.page.fileSlug in authorKeys %}<link rel="author" href="{{ metadata.url }}{{ authorPage.url }}">
 {% endif %}{% endfor %}{% else %}<link rel="author" href="{{ metadata.url }}">
 {% endif %}
 <link rel="describedby" type="application/ld+json" profile="https://schema.org/" href="{{ page.url }}metadata.json">
-<meta property="zotero:itemType" content="blogPost" />
+{% if isPodcast %}<meta property="zotero:itemType" content="podcast" />
+{% else %}<meta property="zotero:itemType" content="blogPost" />
+{% endif %}
 <meta property="dc:title" content="{{ pageTitle | escape }}" />
 {% for authorName in authorNames %}<meta property="dc:creator" content="{{ authorName | escape }}" />
 {% else %}<meta property="dc:creator" content="Indigenous Law Institute" />
@@ -116,7 +121,7 @@
 {% if date %}<meta property="dc:date" content="{{ date | date('Y-m-d') }}" />{% endif %}
 <meta property="dc:language" content="{{ metadata.language }}" />
 <meta property="dc:identifier" content="{{ pageCanonical }}" />
-<meta name="citation_title" content="{{ pageTitle | escape }}" />
+{# no citation_title on blogPost/podcast: it makes Zotero guess journalArticle; dc:title carries the title #}
 {% for authorName in authorNames %}<meta name="citation_author" content="{{ authorName | escape }}" />
 {% else %}<meta name="citation_author" content="Indigenous Law Institute" />
 {% endfor %}
@@ -125,6 +130,12 @@
 <meta name="citation_public_url" content="{{ pageCanonical }}" />
 <meta name="citation_language" content="{{ metadata.language }}" />
 {% if doi %}<meta name="citation_doi" content="{{ doi | escape }}" />{% endif %}
-<meta name="prism.genre" content="blogentry" />
-<meta name="prism.publicationName" content="Indigenous Law Institute" />
+{% if isPodcast %}<meta name="prism.genre" content="podcast" />
+{% else %}<meta name="prism.genre" content="blogentry" />
+{% endif %}
+{% if 'dominationchronicles' in pageCanonical %}<meta name="prism.publicationName" content="Domination Chronicles" />
+{% else %}<meta name="prism.publicationName" content="Indigenous Law Institute" />
+{% endif %}
+{% else %}{# Non-blog pages: add zotero:itemType for discoverability #}
+<meta property="zotero:itemType" content="webPage" />
 {% endif %}
